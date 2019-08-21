@@ -1,0 +1,61 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Total Destinations = {total} | <a href="index.php?action=add_destinatie">Add Destination</a></h3>
+<p><b>Destinations</b> are considered arrival points in <b>Connections</b>, you can add <b>Destinations</b> in this template as many as you need.</p>
+
+<form name="form1" method="post" action="index.php?action=delete_destinatie">
+<table width="100%" border="1" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+    <td>
+	    <div align="center">
+        <input type="submit" name="Submit" value="Delete Destination">
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" bgcolor="#CCCCCC" align="center"><b>Edit Destination</b>
+	</td>
+    <td width="13%" bgcolor="#CCCCCC" align="center"><b>Destination ID<a href="index.php?action=destinatie&order=id_destinatie&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=destinatie&order=id_destinatie&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="17%" bgcolor="#e681a6" align="center"><b>Destination Label<a href="index.php?action=destinatie&order=label&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=destinatie&order=label&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="22%" bgcolor="#e681a6" align="center"><b>Destination Nume<a href="index.php?action=destinatie&order=nume_destinatie&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=destinatie&order=nume_destinatie&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>    
+    <td width="22%" bgcolor="#e681a6" align="center"><b>Destination Url<a href="index.php?action=destinatie&order=url_destinatie&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=destinatie&order=url_destinatie&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="14%" bgcolor="#CCCCCC" align="center"><b>Delete Destination</b>
+	</td>
+  </tr>
+   {rows}
+  <tr>
+    <td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+    <td>
+	    <div align="center">
+        <input type="submit" name="Submit" value="Delete Destination">
+        </div>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<!--</form>-->

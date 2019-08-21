@@ -1,0 +1,17 @@
+<div class="text">
+<div class="campuri">
+<form name="form1" action="index.php?action=do_edit_legaturi_statii" method="post">
+<table align="center" class="campuri" border="0" width="690" cellspacing="3" cellpadding="0">
+  <tr><td colspan="2" align="center">EDITEAZA LEGATURA STATIE</td></tr>
+  <tr><td colspan="2"><font color="red">{error}</font></td></tr>
+  <tr><td>Selecteaza statia de pornire</td><td><select name="id_statie_pornire"><option selected  value="{id_statie_pornire}">{statie_pornire}</option>{statii}</select></td></tr>
+  <tr><td>Descriere statia de pornire</td><td><textarea name="descriere_pornire">{descriere_pornire}</textarea></td></tr>
+  <tr><td>Ora pornire</td><td><input type="text" value="{ora_pornire}" name="ora_pornire"> oo:mm</td></tr>
+  <tr><td>Selecteaza statia de sosire</td><td><select name="id_statie_sosire"><option selected  value="{id_statie_sosire}">{statie_sosire}</option>{statii}</select></td></tr>
+  <tr><td>Descriere statia de sosire</td><td><textarea name="descriere_sosire">{descriere_sosire}</textarea></td></tr>
+  <tr><td>Ora sosire</td><td><input type="text" value="{ora_sosire}" name="ora_sosire"> oo:mm</td></tr>
+  <tr><td>Pret</td><td><input type="text" value="{pret}" name="pret"></td></tr>
+  <tr><td colspan="2" align="center" height="50">
+  <input type="hidden" name="id_legatura_statie" value="{id_legatura_statie}">
+  <INPUT type=submit value="Trimite"></td></tr></table>
+</form></div></div>

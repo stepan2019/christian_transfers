@@ -1,0 +1,60 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Unitati Vip - Top 4</h3>
+<form name="form1" method="post" action="index.php?action=change_vip">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="9%" bgcolor="#CCCCCC"><h5>ID<a href="index.php?action=vip&page={page}&start={start}&end={end}&order=id_unitate&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=vip&page={page}&start={start}&end={end}&order=id_unitate&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="12%" bgcolor="#CCCCCC"><h5>Nume<a href="index.php?action=vip&page={page}&start={start}&end={end}&order=nume_unitate&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=vip&search={search}&page={page}&by={by}&start={start}&end={end}&order=nume_unitate&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td><td width="9%" bgcolor="#CCCCCC"><h5>Email</h5></td>
+    <td width="8%" bgcolor="#CCCCCC"><h5>Telefon</h5></td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>Start</h5></td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>End</h5></td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>Ordine<a href="index.php?action=vip&order=ordine_vip&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=vip&order=ordine_vip&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>     
+  </tr>
+  {rows}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+        <input type="submit" name="Submit" value="Do changes">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</form>
+<br><br>
+<h3>Unitati Vip Recomandate de Site</h3>
+<form name="form2" method="post" action="index.php?action=change_rvip">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="9%" bgcolor="#CCCCCC"><h5>ID<a href="index.php?action=vip&order=id_unitate&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=vip&order=id_unitate&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="12%" bgcolor="#CCCCCC"><h5>Nume<a href="index.php?action=vip&order=nume_unitate&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=vip&order=nume_unitate&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td><td width="9%" bgcolor="#CCCCCC"><h5>Email</h5></td>
+    <td width="8%" bgcolor="#CCCCCC"><h5>Telefon</h5></td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>Start</h5></td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>End</h5></td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>Ordine<a href="index.php?action=vip&order=ordine_rvip&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=vip&order=ordine_rvip&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>     
+  </tr>
+  {rows_rvip}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+        <input type="submit" name="Submit" value="Do changes">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</form>

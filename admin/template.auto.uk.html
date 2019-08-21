@@ -1,0 +1,34 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Auto - total: {total} | <a href="index.php?action=add_auto_uk">Adauga Auto UK</a></h3>
+ <br>
+<form name="form1" method="post" action="index.php?action=delete_auto_uk">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="5%" bgcolor="#CCCCCC">Edit</td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>ID<a href="index.php?action=auto_uk&search={search}&by={by}&page={page}&start={start}&end={end}&order=id_auto&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=auto_uk&page={page}&search={search}&by={by}&start={start}&end={end}&order=id_auto&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="12%" bgcolor="#CCCCCC"><h5>Nume Auto<a href="index.php?action=auto_uk&search={search}&by={by}&page={page}&start={start}&end={end}&order=nume_auto&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=auto_uk&search={search}&page={page}&by={by}&start={start}&end={end}&order=nume_auto&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>Nr. Pasageri<a href="index.php?action=auto_uk&search={search}&page={page}&by={by}&start={start}&end={end}&order=nr_pasageri&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=auto_uk&search={search}&page={page}&by={by}&start={start}&end={end}&order=nr_pasageri&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>Del</h5></td>
+   
+  </tr>
+  {rows}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+        <input type="submit" name="Submit" value="Sterge selectate">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</form>

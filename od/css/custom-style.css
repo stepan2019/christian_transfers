@@ -1,0 +1,422 @@
+.btn.btn-success, .btn.btn-primary{
+    background-color: #CC2262!important;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #000!important;
+    text-decoration: none!important;
+    border-bottom: none!important;
+}
+.btn:after {
+    content: none!important;
+}
+
+.btn.btn-black,.btn.btn-secondary {
+    background-color: #000!important;
+    border-radius: 5px;
+}
+.btn.btn-black:hover,.btn.btn-secondary:hover {
+    background-color: #CC2262!important;
+    border-radius: 5px;
+}
+
+.btn-night {
+    color: #DCDCDC!important;
+}
+
+p.rs {
+    margin: 2px 0px;
+    border-bottom: 1px solid #dadada;
+    padding: 2px;
+    font-size: 13px;
+}
+
+
+p.rs b {
+  display: inline-block;
+  width: 60px;
+}
+
+.mode_nav {
+    margin-top: 5px;
+ margin-bottom: 15px;
+}
+
+.mode_nav a {
+ margin-left: 3px;
+ margin-top: 3px;
+}
+
+
+
+#main {
+ padding-top: 15px;
+ padding-bottom: 30px;
+}
+
+.card {
+    margin-top: 10px;
+}
+
+.card-header h1 {
+    margin: 1px;
+    padding: 1px;
+    font-size: 26px;
+}
+
+.knownJourneys span {
+    text-decoration: underline;
+}
+
+
+.popup_map {
+    position: relative;
+}
+
+.popup_map h1 {
+    margin: 1px;
+    padding: 1px;
+    font-size: 22px;
+}
+
+.popup_map h2 {
+    margin: 1px;
+    padding: 1px;
+    font-size: 18px;
+    color: #696969;
+}
+
+
+.popup_map h5 {
+    margin: 1px;
+    padding: 1px;
+    font-size: 19px;
+    color: #696969;
+    font-weight: normal;
+}
+
+.popup_map h6 {
+    margin: 1px;
+    padding: 1px;
+    font-size: 17px;
+    color: #1C1C1C;
+    font-weight: normal;
+}
+
+.popup_stations {
+    margin: 10px 0px;
+    background-color: #FFFACD;
+    overflow: auto;
+    padding: 10px;
+}
+
+.popup_stations h5 {
+ display: block;
+ font-weight:normal;
+ font-size: 16px;
+ margin: 1px; padding: 1px;
+}
+
+.popup_stations span {
+ display: inline-block;
+ font-weight:bold;
+ font-size: 16px;
+ margin: 2px; padding: 5px;
+ background-color: #8B0000;
+ color:#fff;
+
+}
+
+
+#map {
+    width:100%;
+    height:600px;
+   background-color: grey;
+}
+
+.marker_popup {
+ border: 2px solid #1E90FF;
+ padding: 5px;
+ line-height: 1.2;
+ font-size: 13px;
+}
+
+.marker_popup p {
+ border-top: 1px solid #dadada;
+ margin-top: 5px;
+ max-width: 400px;
+}
+
+
+span.band-low {
+    display: block;
+    font-weight: bold;
+    color: #008000;
+    width: 80px;
+}
+span.band-moderate {
+    display: block;
+    font-weight: bold;
+    color: #FF8C00;
+    width: 80px;
+}
+span.band-high {
+    display: block;
+    font-weight: bold;
+    color: #FF0000;
+    width: 80px;
+}
+span.band-very-high {
+    display: block;
+    font-weight: bold;
+    color: #6A5ACD;
+    width: 80px;
+}
+
+td.currentForecast {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+p.bandInfo {
+    font-size: 13px;
+    margin: 3px 0px;
+    padding: 1px;
+    max-width: 300px;
+    font-style: normal;
+}
+
+p.bandInfo b {
+
+}
+
+
+#myModalPlace {
+
+}
+
+.popup_place {
+
+}
+
+span.check_yes {
+    color: #008000;
+}
+
+span.check_no {
+    color: #FF0000;
+}
+
+.gmaps_url {
+    display: block;
+}
+
+.gmaps_url2 {
+    display: block;
+}
+
+.gmaps_url_inline {
+    display: inline-block;
+}
+
+
+.stopMessages {
+    border: 1px solid #FF0000;
+    padding: 10px 15px;
+    margin: 20px;
+}
+
+.stopMessages span {
+    border-bottom: 1px solid #dadada;
+ display: block;
+ padding: 5px 0px;
+}
+
+
+.journey {
+    margin: 10px 0px;
+    border: 1px solid #dadada;
+}
+
+.journey h5 {
+    background-color: #DCDCDC;
+    font-weight: normal;
+    margin: 0px 0px;
+    padding: 3px;
+}
+
+.journey .fare {
+    margin: 5px 15px;
+    padding: 10px;
+    background-color: #FFFACD;
+}
+
+.journey .fare b {
+ display: block;
+}
+
+.journey .legs {
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.journey .legs h3 {
+
+}
+
+
+.journey .legs .leg {
+    margin: 10px 0px;
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+}
+
+.journey .legs .leg h3 {
+ font-weight: normal;
+}
+
+
+.journey .legs .leg p {
+ margin: 2px 0px;
+ padding: 1px;
+ line-height: 1.1;
+}
+.journey .legs .leg .leg_disruptions {
+ border: 1px solid #FF0000;
+ padding: 10px;
+}
+
+
+li.paginate_button {
+    position: relative;
+    padding: 0px;
+}
+
+li.paginate_button:before {
+    content: none;
+    position: relative;
+}
+
+li.paginate_button:after {
+    content: none;
+    position: relative;
+}
+
+
+table tr td {
+    text-transform: none!important;
+}
+
+li.nav-item:before {
+    content: none;
+    position: relative;
+}
+
+p.cabwise_time{
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+}
+
+p.cabwise_time b{
+ display: block;
+}
+
+p.cabwise_time span{
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    display: block;
+    color: #696969;
+}
+
+a.taxi_phone {
+    display: block;
+}
+
+
+.web-sitemap {
+    position: relative;
+}
+
+.web-sitemap h3 {
+    position: relative;
+}
+
+.web-sitemap ul {
+ margin-left: 15px;
+ margin-top: 0px;
+}
+
+.web-sitemap ul li {
+ display: block;
+ text-transform: uppercase;
+ font-weight: bold;
+}
+
+.web-sitemap ul ul{
+ margin-left: 30px;
+ background-color: #F5F5F5;
+ margin-top:0px;
+ padding-top: 0px;
+ margin-bottom: 30px;
+}
+
+.web-sitemap ul ul li {
+ font-size: 14px;
+}
+
+.sidebar-places {
+ padding: 15px;
+}
+
+.sidebar-places a {
+    display: block;
+}
+
+a.gmaps_url2:after,a.gmaps_url:after,a.taxi_phone:after,a.gmaps_url_inline:after {
+    content: none!important;
+}
+
+
+.additional {
+}
+
+.additional table tr td {
+ font-size: 12px;
+ font-family: Raleway;
+}
+
+h4.foundh4 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #696969;
+}
+
+p.maxlines {
+    max-width: 250px;
+}
+
+.details7 h6 {
+    margin: 2px 0px;
+    padding: 1px;
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

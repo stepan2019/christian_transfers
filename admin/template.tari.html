@@ -1,0 +1,43 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Total Countries = {total} | <a href="index.php?action=add_tara">Add Country</a></h3>
+<p>Every <b>Connection</b> is assigned to one <b>Country</b>, you can add <b>Countries</b> in this template as many as you need.</p>
+
+<form name="form1" method="post" action="index.php?action=delete_tara">
+<table width="100%" border="1" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td colspan="4">
+	    <div align="right">
+           <input type="submit" name="Submit" value="Delete Country">
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" bgcolor="#CCCCCC"><b>Edit Country</b>
+	</td>
+    <td width="20%" align="center" bgcolor="#e681a6"><b>Country ID<a href="index.php?action=tari&order=id_tara&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=tari&order=id_tara&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="50%" align="center" bgcolor="#e681a6"><b>Country Name<a href="index.php?action=tari&order=nume_tara&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=tari&order=nume_tara&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="10%" bgcolor="#CCCCCC"><b>Delete Country</b>
+	</td>
+  </tr>
+  <b>{rows}</b>
+  <tr>
+    <td colspan="4">
+	    <div align="right">
+           <input type="submit" name="Submit" value="Delete Country">
+        </div>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</form>

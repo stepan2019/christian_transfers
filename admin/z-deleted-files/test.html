@@ -1,0 +1,54 @@
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Maps JavaScript API Example</title>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAF_xIoVXR1llZSdJqd6iALxS-dJUw33zXGtSqfXTOQH0VaKAW7hT-WMy6Zsler_xPVh61G7Y6e_N23g" type="text/javascript"></script>
+    <script type="text/javascript">
+
+
+    var map = null;
+    var geocoder = null;
+
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map_canvas"));
+       map.addControl(new GSmallMapControl());
+	   map.addControl(new GMapTypeControl());
+
+// map.setCenter(new GLatLng(47.6597801, 23.5771751), 13);
+        geocoder = new GClientGeocoder();
+      }
+    }
+ function showAddress(address) {
+      if (geocoder) {
+        geocoder.getLatLng(
+          address,
+          function(point) {
+            if (!point) {
+              alert(address + " not found");
+            } else {
+              map.setCenter(point, 17);
+              var marker = new GMarker(point);
+              map.addOverlay(marker);
+              marker.openInfoWindowHtml(address);
+            }
+          }
+        );
+        
+      }
+    }
+    var marker = new google.maps.Marker({   
+  position: new google.maps.LatLng(47.660416, 23.578076),   
+  map: map,   
+  title: 'My workplace',   
+  clickable: false  
+});  
+    </script>
+  </head>
+  <body onload="initialize(); showAddress('Baia Mare Vasile Alecsandri 40')" onunload="GUnload()">
+    <div id="map_canvas" style="width: 600px; height: 500px"></div>
+  </body>
+</html>
+

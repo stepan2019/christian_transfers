@@ -1,0 +1,76 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Unitati -- total: {total}</h3>
+<form name="form2" method="post" action="index.php?action=unitati">
+Search: 
+<input name="search" type="text" id="search" size="20">
+by 
+<select name="by" id="by">
+<option value="id_unitate" selected>id</option>
+<option value="email_rezervari">email</option>
+<option value="nume_unitate">nume</option>
+</select><br>
+Order by: <select name="order" id="order">
+<option value="id_unitate" selected>id</option>
+<option value="email_rezervari">email</option>
+<option value="nume_unitate">nume</option>
+<option value="data_inscriere">data_inscriere</option>
+<option value="vizite">vizite</option>
+</select><br>
+De la data: <input type="text" name="start"> pana la data: <input type="text" name="end">
+<Br>
+<input type="submit" name="Submit2" value="Go">
+</form>
+<p align="center">{total} unitati. Pagina {page} din {pages}.<br>
+  <br>
+  [ <a href="index.php?action=unitati&page=1&start={start}&end={end}&order={order}&rule={rule}">&lt;&lt; First</a> ] [ <a href="index.php?action=unitati&page={previous}&start={start}&end={end}&order={order}&rule={rule}">&lt; Previous</a> ] [ <a href="index.php?action=unitati&page={next}&start={start}&end={end}&order={order}&rule={rule}">Next &gt;</a> ] [ <a href="index.php?action=unitati&page={pages}&start={start}&end={end}&order={order}&rule={rule}">Last &gt;&gt;</a> ]
+</p>
+<form name="form1" method="post" action="index.php?action=delete_unitati">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="9%" bgcolor="#CCCCCC"><h5>ID<a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=id_unitate&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=id_unitate&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="5%" bgcolor="#CCCCCC"><h5>Evenimente</h5></td>
+    <td width="5%" bgcolor="#CCCCCC"><h5>Terase</h5></td>
+    <td width="5%" bgcolor="#CCCCCC"><h5>Revelion</h5></td>
+    <td width="5%" bgcolor="#CCCCCC"><h5>V-Day</h5></td>
+    <td width="5%" bgcolor="#CCCCCC"><h5>8 Martie</h5></td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Nume<a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=nume_unitate&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&search={search}&page={page}&by={by}&start={start}&end={end}&order=nume_unitate&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>Adresa<a href="index.php?action=unitati&search={search}&page={page}&by={by}&start={start}&end={end}&order=adresa&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&search={search}&page={page}&by={by}&start={start}&end={end}&order=adresa&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="8%" bgcolor="#CCCCCC"><h5>Contract<a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=nr_contract&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=nr_contract&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+     <td width="4%" bgcolor="#CCCCCC"><h5>Vip<a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=vip&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=vip&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="8%" bgcolor="#CCCCCC"><h5>End Vip<a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=end_vip&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=end_vip&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="4%" bgcolor="#CCCCCC"><h5>RVip<a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=recomandari_vip&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=recomandari_vip&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="8%" bgcolor="#CCCCCC"><h5>End RVip<a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=end_recomandari_vip&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=end_recomandari_vip&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="8%" bgcolor="#CCCCCC"><h5>Vizite<a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=vizite&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=unitati&page={page}&start={start}&end={end}&order=vizite&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5></td>
+    <td width="8%" bgcolor="#CCCCCC"><h5>Obs.</h5></td>
+    <td width="3%" bgcolor="#CCCCCC"><h5>Del</h5></td>     
+  </tr>
+  {rows}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+        <input type="submit" name="Submit" value="Do changes">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</form>
+<p align="center">{total} unitati. Pagina {page} din {pages}.<br>
+  <br>
+  [ <a href="index.php?action=unitati&page=1&start={start}&end={end}&order={order}&rule={rule}">&lt;&lt; First</a> ] [ <a href="index.php?action=unitati&page={previous}&start={start}&end={end}&order={order}&rule={rule}">&lt; Previous</a> ] [ <a href="index.php?action=unitati&page={next}&start={start}&end={end}&order={order}&rule={rule}">Next &gt;</a> ] [ <a href="index.php?action=unitati&page={pages}&start={start}&end={end}&order={order}&rule={rule}">Last &gt;&gt;</a> ]
+</p>

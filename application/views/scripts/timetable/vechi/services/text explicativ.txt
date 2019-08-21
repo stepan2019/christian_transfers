@@ -1,0 +1,1 @@
+varianta de pe templatul nou dar nefolosita, nu are logica ptr noi

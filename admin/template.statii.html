@@ -1,0 +1,42 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Total Station = {total} | <a href="index.php?action=add_statii">Add Station</a></h3>
+
+<form name="form1" method="post" action="index.php?action=delete_statii">
+<table width="100%" border="1" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td colspan="4">
+	    <div align="right">
+            <input type="hidden" name="id_legaturi" value="{id_legaturi}">
+            <input type="submit" name="Submit" value="Delete Station">
+        </div>
+    </td>
+   </tr>
+  <tr>
+    <td width="10%" bgcolor="#CCCCCC" align="center"><b>Edit Station</b></td>
+    <td width="10%" bgcolor="#CCCCCC" align="center"><b>Station ID<a href="index.php?action=statii&order=id_statie&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=statii&order=id_statie&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="40%" bgcolor="#e681a6" align="center"><b>Station Name<a href="index.php?action=statii&order=nume_statie&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=statii&order=nume_statie&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+   <td width="10%" bgcolor="#CCCCCC" align="center"><b>Delete Station</b></td>
+  </tr>
+  {rows}
+  <tr>
+    <td colspan="4">
+	    <div align="right">
+            <input type="hidden" name="id_legaturi" value="{id_legaturi}">
+            <input type="submit" name="Submit" value="Delete Station">
+        </div>
+    </td>
+   </tr>
+</table>
+<p>&nbsp;</p>
+<!--</form>-->

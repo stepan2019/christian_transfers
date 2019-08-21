@@ -1,0 +1,229 @@
+{include file='../common/header_short.phtml'}
+<script type="text/javascript" language="javascript">
+    {
+        literal
+    }
+
+    function display_tr(check) {
+        var radios = document.getElementsByName('arrival_auto');
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                // do whatever you want with the checked radio
+                if (radios[i].value == '9999') {
+                    document.getElementById('arrival_shuttle_td').style.display = '';
+                } else {
+                    document.getElementById('arrival_shuttle_td').style.display = 'none';
+                }
+                // only one radio can be logically checked, don't check the rest
+                break;
+            }
+        }
+    }
+
+    function display_tr_dep(check) {
+        var radios2 = document.getElementsByName('dep_auto');
+        for (var i = 0, length = radios2.length; i < length; i++) {
+            if (radios2[i].checked) {
+                // do whatever you want with the checked radio
+                if (radios2[i].value == '9999') {
+                    document.getElementById('dep_shuttle_td').style.display = '';
+                } else {
+                    document.getElementById('dep_shuttle_td').style.display = 'none';
+                }
+                // only one radio can be logically checked, don't check the rest
+                break;
+            }
+        }
+    }
+
+    {
+        /literal}
+</script>
+
+<div class="wrap">
+    <div class="row">
+        <!--- Content -->
+        <div class="full-width content" id="selectcar">
+            <form method="POST" action="/details_transfer/{$tara}-{$url_aeroport}-{$url_destinatie}" name="form2"
+                  id="form2">
+                <p>Please see bellow all the cars available for your selection.</br>
+                    Shuttle bus is with price per person and private cars are with price per all car.</br>
+                    Select one of the car with a simple click on the radio button and then click button to <b>Submit
+                        your car and go to next step</b>.
+                </p>
+                <div class="results">
+                    <header class="f-title color" id="carName">Select transfer type for your DEPARTURE from
+                        {$nume_aeroport} ({$nume_tara}) to {$nume_destinatie}
+                    </header>
+                    <!-- Item -->
+                    {section name=n loop=$nrAutoa}
+                    <article class="result" {if $autoa[n][1]==
+                    'Shuttle'} id="arrival_auto"{/if}>
+                    <div class="one-fourth heightfix"><img src="{$autoa[n][7]}" alt="{$autoa[n][1]}"/></div>
+                    <div class="one-half heightfix">
+                        <h3 id="">{$autoa[n][1]} <a href="javascript:void(0)" class="trigger color"
+                                                    title="Read more">?</a></h3>
+                        <ul>
+                            <li>
+                                <span class="icon fa fa-user-o"></span>
+                                <p>Max <strong>{$autoa[n][2]} {$mm_nr_pasageri}</strong> <br/>per vehicle</p>
+                            </li>
+                            <li>
+                                <span class="icon fa fa-map-o"></span>
+                                <p>Distance <strong>{$autoa[n][3]} {if $tara == 'uk'}miles{else}km{/if}</strong></p>
+                            </li>
+                            <li>
+                                <span class="icon fa fa-clock-o"></span>
+                                <p>Estimated time <br/><strong>{$autoa[n][4]} mins</strong></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="one-fourth heightfix">
+                        <div>
+                            <div class="price">{if $selected_arrival_auto == 0}{/if}{$autoa[n][10]}
+                                <small>{$currency}</small>
+                            </div>
+                            <!--                    <span class="meta">per passenger</span>-->
+                            <div class="select-this">Select this</div>
+                            <div class="radio-car"><input type="radio" name="arrival_auto" {if $selected_arrival_auto!=0
+                                                          && $selected_arrival_auto== $autoa[n][0]} checked
+                                                          {elseif $selected_arrival_auto== 0 && $autoa[n][1]=='Shuttle'}
+                                                          checked
+                                                          {/if}
+                                onclick="display_tr(document.getElementById('arrival_shuttle'))" {$isshuttle}
+                                value="{$autoa[n][0]}">
+                            </div>
+                        </div>
+                    </div>
+                    {if $autoa[n][1] == 'Shuttle'}
+                    <div class="full-width information" id="arrival_shuttle_td"
+                         style="{if $selected_arrival_auto != 0}display:none;{/if}">
+                        {$statii_shuttle_arrival}
+                    </div>
+                    {/if}
+                    <div class="full-width information">
+                        <a href="javascript:void(0)" class="close color" title="Close">x</a>
+                        <h1>{$autoa[n][1]} transfer for max {$autoa[n][2]} persons {$nume_aeroport} -
+                            {$nume_destinatie}</h1>
+                    </div>
+                    </article>
+                    {/section}
+
+                    <p>You select your transfer in <strong>{$nume_tara}</strong> from <strong>{$nume_aeroport}</strong>
+                        to <strong>{$nume_destinatie}</strong>.</br>
+                        You can now select your <b>Return</b> transfer bellow.</br>
+                        If you selected only <b>One Way</b> transfer you can still choose <b>Return Transfer</b> by
+                        checking <b>Return</b> on the top form.</br>
+                        Select one of the cars with a simple click on the radio button next to <b>Select this</b> and
+                        then click <b>Submit your car and go to next step from your booking</b>.</p>
+                </div>
+                {if $nrAutod>0}
+                <header class="f-title color">Select transfer for your RETURN from {$nume_aeroport_return}
+                    ({$nume_tara_return}) to {$nume_destinatie_return}
+                </header><!--{$return}-->
+                {/if}
+                <div class="results">
+                    {section name=n loop=$nrAutod}
+                    <article class="result" {if $selected_dep_auto== 0} id="dep_auto" {
+                    /if}>
+                    <div class="one-fourth heightfix"><img src="{$autod[n][7]}" alt="{$autod[n][1]}"/></div>
+                    <div class="one-half heightfix">
+                        <h3>{$autod[n][1]} <a href="javascript:void(0)" class="trigger color" title="Read more">?</a>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span class="icon fa fa-user-o"></span>
+                                <p>Max <strong>{$autod[n][2]} {$mm_nr_pasageri}</strong> <br/>per vehicle</p>
+                            </li>
+                            <li>
+                                <span class="icon fa fa-map-o"></span>
+                                <p>Distance <strong>{$autod[n][3]} {if $tara == 'uk'}miles{else}km{/if}</strong></p>
+                            </li>
+                            <li>
+                                <span class="icon fa fa-clock-o"></span>
+                                <p>Estimated time <br/><strong>{$autod[n][4]} mins</strong></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="one-fourth heightfix">
+                        <div>
+                            <div class="price">
+                                {if $selected_dep_auto == 0}{/if}
+
+                                {$autod[n][10]}
+
+
+                                <small>{$currency}</small>
+                            </div>
+                            <div class="select-this">Select this</div>
+                            <div class="radio-car"><input type="radio" name="dep_auto" {$selected_dep_auto} {if
+                                                          $selected_dep_auto!=0 && $selected_dep_auto== $autod[n][0]}
+                                                          checked
+                                                          {elseif $selected_dep_auto== 0 && $autod[n][1]=='Shuttle'}
+                                                          checked
+                                                          {/if}
+                                onclick="display_tr_dep(document.getElementById('dep_shuttle'))" value="{$autod[n][0]}">
+                            </div>
+                        </div>
+                    </div>
+                    {if $autod[n][1] == 'Shuttle'}
+                    <div class="full-width information" id="dep_shuttle_td"
+                         style="{if $selected_dep_auto != 0}display:none;{/if}">
+                        {$statii_shuttle_dep}
+                    </div>
+                    {/if}
+                    <div class="full-width information">
+                        <a href="javascript:void(0)" class="close color" title="Close">x</a>
+                        <h1>{$autoa[n][1]} transfer for max {$autoa[n][2]} persons {$nume_aeroport_return} -
+                            {$nume_destinatie_return}</h1>
+                    </div>
+                    </article>
+                    {/section}
+                </div>
+                <div class="full-width content"><input class="btn grey fullsize submitbtn" type="submit" name="submit"
+                                                       value="Submit your car and go to next step from your Booking">
+                </div>
+            </form>
+            <p>{$extra_info}</p>
+            <p></p>
+            <p><strong>Christian Transfers</strong> can arrange any type of private transportation from <strong>{$nume_aeroport}</strong>
+                for any group size to more than 500 destinations from Romania, Hungary, Bulgaria, Serbia, Austria,
+                Croatia, Germany and other countries arround. Private taxi transfers, group minivans or minibuses and
+                coaches are available on the website or on request.
+            </p>
+            <p>
+            <table width="90%" cellspacing="10" cellpadding="5" border="0">
+                <tr>
+                    <td align="left" style="border:0px;vertical-align:top;" style="width:200px;"><strong>All available
+                            transfers from {$nume_aeroport}<br><br>{$extra_info1}</strong>
+                    </td>
+                    <td style="width:20px;">&nbsp;
+                    </td>
+                    <td align="right" style="border:0px;vertical-align:top;" style="width:200px;"><strong>All available
+                            transfers to {$nume_destinatie}<br><br>{$extra_info2}</strong>
+                    </td>
+                </tr>
+            </table>
+            </p>
+            <p><a href='/airport_transfer/{$tara}-{$url_aeroport}-{$url_destinatie}'
+                  alt='{$nume_aeroport} - {$nume_destinatie}'><h1>{$nume_aeroport} to {$nume_destinatie} airport
+                        transfers taxi minivan minibus in {$nume_tara}</h1></a>
+            </p>
+            </br></br></br>
+            <p>Why use our private or shuttle transfers from {$nume_aeroport} when you are in {$nume_tara} ? </br>
+
+                - <b>Reliability and convenience</b> because of the carefully selected <b>transportation
+                    companies</b>; </br>
+                - Save money & time with <b>fixed rates</b>, no booking fees, no hidden charges, no charge for excess
+                luggage; </br>
+                - No surprises about <b>Airport Meet and Greet</b>. </br>
+                - 24 hours pick-up or drop-off, vehicle and passenger seat insurance, friendly hotel or resort
+                orientation; </br>
+                - <b>Door to door service</b> for private transfers, <b>monitored flight and train schedule</b> for
+                airports and stations pickups;
+            </p>
+        </div>
+    </div>
+</div>
+{$javascript}
+{include file='../common/footer.phtml'}

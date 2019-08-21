@@ -1,0 +1,5 @@
+RewriteEngine off
+AuthUserFile "/home/brgambal/.htpasswds/public_html/christiantransfers.eu/admin/passwd"
+AuthType Basic
+AuthName "home/brgambal/public_html/christiantransfers.eu/admin"
+require valid-user

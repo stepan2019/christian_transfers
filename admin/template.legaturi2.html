@@ -1,0 +1,89 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<form name="form1" method="post" action="index.php?action=delete_legaturi">
+<h3>Available Connections from {nume_aeroport}</h3>
+<table width="100%" border="1" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td align="center" width="4%" bgcolor="#CCCCCC"><b>Edit</b>
+	</td>
+	<td align="center" width="5%" bgcolor="#CCCCCC"><b>Prices</b>
+	</td>
+    <td align="center" width="12%" bgcolor="#e681a6"><b>Airport/City<a href="index.php?action=legaturi&cauta={id_aeroport}&order1=nume_aeroport&rule1=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi&cauta={id_aeroport}&order1=nume_aeroport&rule1=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td align="center" width="12%" bgcolor="#e681a6"><b>Destination<a href="index.php?action=legaturi&cauta={id_aeroport}&order1=nume_destinatie&rule1=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi&cauta={id_aeroport}&order1=nume_destinatie&rule1=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>    
+    <td align="center" width="4%" bgcolor="#CCCCCC"><b>Km</b></td>
+    <td align="center" width="4%" bgcolor="#CCCCCC"><b>Time</b></td>
+    <td align="center" width="50%" bgcolor="#CCCCCC"><b>Prices</b></td>
+    <td align="center" width="3%" bgcolor="#CCCCCC"><b>Del</b></td>
+    <!-- <td width="3%" bgcolor="#CCCCCC"><b>Del</b></td>     -->
+  </tr>
+  
+  {rows}
+  
+  <tr>
+    <td align="center" width="4%" bgcolor="#CCCCCC"><b>Edit</b>
+	</td>
+	<td align="center" width="5%" bgcolor="#CCCCCC"><b>Prices</b>
+	</td>
+    <td align="center" width="12%" bgcolor="#e681a6"><b>Airport/City<a href="index.php?action=legaturi&cauta={id_aeroport}&order1=nume_aeroport&rule1=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi&cauta={id_aeroport}&order1=nume_aeroport&rule1=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td align="center" width="12%" bgcolor="#e681a6"><b>Destination<a href="index.php?action=legaturi&cauta={id_aeroport}&order1=nume_destinatie&rule1=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi&cauta={id_aeroport}&order1=nume_destinatie&rule1=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>    
+    <td align="center" width="4%" bgcolor="#CCCCCC"><b>Km</b></td>
+    <td align="center" width="4%" bgcolor="#CCCCCC"><b>Time</b></td>
+    <td align="center" width="50%" bgcolor="#CCCCCC"><b>Prices</b></td>
+    <td align="center" width="3%" bgcolor="#CCCCCC"><b>Del</b></td>
+    <!-- <td width="3%" bgcolor="#CCCCCC"><b>Del</b></td>     -->
+  </tr>
+  <tr>
+    <td bgcolor="" colspan="6">
+	   <div align="center"></div>
+    </td>
+    <td bgcolor="" colspan="2">
+	    <div align="right">
+		<input type="hidden" name="id_aeroport" value="{id_aeroport}">
+        <input type="submit" name="Submit" value="Delete Connection">
+        </div>
+    </td>
+   </tr>
+</table>
+</form>
+<p>&nbsp;</p>
+<form method="post" action="index.php?action=do_add_legaturi">
+<h3>Unused Destinations</h3>
+<table width="100%" border="1" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td width="40%" bgcolor="#CCCCCC"><b>Choose new Destinations from list below<a href="index.php?action=legaturi&cauta={id_aeroport}&order2=nume_destinatie&rule2=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi&cauta={id_aeroport}&order2=nume_destinatie&rule2=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>    
+    <td width="10%" bgcolor="#CCCCCC"><b>Click to add</b>
+    </td>
+   <!-- <td width="3%" bgcolor="#CCCCCC"><h5>Del</h5></td>     -->
+  </tr>
+  {rows2}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+    	<input type="hidden" name="id_aeroport" value="{id_aeroport}">
+        <input type="submit" name="Submit" value="Add Connection">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</form>

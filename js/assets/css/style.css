@@ -1,0 +1,57 @@
+/**
+*
+* Author: Limpid Themes
+* Last Modified: 09-06-2015
+* Description: Stylesheet used by CRUISE template
+*
+**/
+.search-section {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.search-section .nav-tabs {
+	border-bottom: none;
+}
+.search-section .nav-tabs .active {
+	position: relative;
+}
+.search-section .nav-tabs .active:after {
+	background: #f9676b none repeat scroll 0 0;
+    content: "";
+    height: 20px;
+    left: 40%;
+    position: absolute;
+    top: 80%;
+    transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+    width: 20px;
+}
+.search-section .nav-tabs > li > a {
+	color: #ffffff;
+	background: rgba(10, 49, 82, 0.5);
+	letter-spacing: 1px;
+	font-weight: bold;
+	border-radius: 2px 2px 0 0;
+	margin-right: 4px;
+}
+.search-section .nav > li > a {
+	padding: 15px;
+}
+.search-section .nav-tabs > li {
+	margin-bottom: 0px;
+}
+.search-section .nav-tabs > li > a:hover {
+	color: #ffffff;
+	background: #f9676b;
+	border: 1px solid transparent;
+}
+.search-section .nav-tabs > li.active > a, 
+.search-section .nav-tabs > li.active > a:focus, 
+.search-section .nav-tabs > li.active > a:hover {
+	color: #ffffff;
+	background: #f9676b;
+	border: 1px solid transparent;
+}

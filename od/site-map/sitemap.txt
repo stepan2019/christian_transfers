@@ -1,0 +1,6 @@
+https://www.christiantransfers.eu/od/site-map/sitemap.xml
+https://www.christiantransfers.eu/od/site-map/sitemap.php
+https://www.christiantransfers.eu/od/site-map/sitemap-lines.php
+https://www.christiantransfers.eu/od/site-map/sitemap-stations.php
+https://www.christiantransfers.eu/od/site-map/sitemap-stop-points.php
+https://www.christiantransfers.eu/od/site-map/sitemap-places.php

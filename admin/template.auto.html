@@ -1,0 +1,39 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Total Vehicles = {total} | <a href="index.php?action=add_auto">Add Vehicle</a></h3>
+ <br>
+<form name="form1" method="post" action="index.php?action=delete_auto">
+<table width="100%" border="1" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td width="10%" bgcolor="#CCCCCC" align="center"><b>Edit Vehicle</b></td>
+    <td width="10%" bgcolor="#CCCCCC" align="center"><b>Vehicle ID<a href="index.php?action=auto&search={search}&by={by}&page={page}&start={start}&end={end}&order=id_auto&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=auto&page={page}&search={search}&by={by}&start={start}&end={end}&order=id_auto&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="35%" bgcolor="#e681a6" align="center"><b>Vehicle Name<a href="index.php?action=auto&search={search}&by={by}&page={page}&start={start}&end={end}&order=nume_auto&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=auto&search={search}&page={page}&by={by}&start={start}&end={end}&order=nume_auto&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="25%" bgcolor="#e681a6" align="center"><b>Number of passengers in the Vehicle<a href="index.php?action=auto&search={search}&page={page}&by={by}&start={start}&end={end}&order=nr_pasageri&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=auto&search={search}&page={page}&by={by}&start={start}&end={end}&order=nr_pasageri&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="10%" bgcolor="#CCCCCC" align="center"><b>Delete Vehicle</b></td>
+   
+  </tr>
+  {rows}
+  <tr>
+    <td colspan="5">
+	    <div align="right">
+            <input type="hidden" name="id_legaturi" value="{id_legaturi}">
+            <input type="submit" name="Submit" value="Delete Vehicle">
+        </div>
+    </td>
+   </tr>
+</table>
+<p>&nbsp;</p>
+</form>

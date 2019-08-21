@@ -1,0 +1,32 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Total Sub-Contractors (Lists) = {total} | <a href="index.php?action=add_lista">Add new Sub-Contractor(List)</a></h3>
+
+<form name="form1" method="post" action="index.php?action=delete_liste">
+<table width="50%" border="1" align="center" cellpadding="5" cellspacing="1">
+  <tr>  
+    <td width="15%" bgcolor="#CCCCCC" align="center"><b>List ID<a href="index.php?action=liste&order=id_lista&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=liste&order=id_lista&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+
+    <td width="30%" bgcolor="#e681a6" align="center"><b>List (Subcontractor) Name</b></td>
+    <td width="10%" bgcolor="#CCCCCC" align="center"><b>Delete List</b></td>
+  </tr>
+  {rows}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+        <input type="submit" name="Submit" value="Sterge selectate">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</form>

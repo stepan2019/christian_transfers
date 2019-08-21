@@ -1,0 +1,3 @@
+[22-Apr-2019 06:16:34 UTC] PHP Notice:  Undefined variable: argv in /home/brgambal/public_html/christiantransfers.eu/include/stripe/build.php on line 4
+[23-Apr-2019 05:38:49 UTC] PHP Notice:  Undefined variable: argv in /home/brgambal/public_html/christiantransfers.eu/include/stripe/build.php on line 4
+[23-Apr-2019 05:38:50 UTC] PHP Notice:  Undefined variable: argv in /home/brgambal/public_html/christiantransfers.eu/include/stripe/build.php on line 4

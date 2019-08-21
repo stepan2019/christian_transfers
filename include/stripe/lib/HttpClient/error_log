@@ -1,0 +1,1 @@
+[22-Apr-2019 06:18:58 UTC] PHP Fatal error:  Interface 'Stripe\HttpClient\ClientInterface' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/HttpClient/CurlClient.php on line 30

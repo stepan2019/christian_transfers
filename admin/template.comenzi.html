@@ -1,0 +1,57 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+
+ <h3>Total Bookings = {total}</h3>
+
+ <p align="center">{total} Bookings, page {page} from {pages}.<br>
+  <br>
+  [ <a href="index.php?action=comenzi&page=1&start={start}&end={end}&order={order}&rule={rule}">&lt;&lt; First</a> ] [ <a href="index.php?action=comenzi&page={previous}&start={start}&end={end}&order={order}&rule={rule}">&lt; Previous</a> ] [ <a href="index.php?action=comenzi&page={next}&start={start}&end={end}&order={order}&rule={rule}">Next &gt;</a> ] [ <a href="index.php?action=comenzi&page={pages}&start={start}&end={end}&order={order}&rule={rule}">Last &gt;&gt;</a> ]
+ </p>
+ 
+ <form name="form1" method="post" action="index.php?action=delete_comenzi">
+   <p style="text-align:center">Select the LIST to add the Bookings:<br><br>
+        <select name="liste" style="width:150px;border:1px solid #000;">{liste}</select><br><br>
+   </p>
+ 
+ <table width="100%" border="1" align="center" cellpadding="2" cellspacing="1">
+  <tr>
+    <td colspan="3" bgcolor="#CCCCCC"><div align="center"><input type="submit" name="Submit" value="Add to Lists"></div></td>
+	<td colspan="8"><div align="center"><b>Bookings List</b></div></td>
+    <td colspan="3" bgcolor="#CCCCCC"><div align="center"><input type="submit" name="Submit" value="Delete Selected"></div></td>
+  </tr>
+  <tr>
+  <td width="5%" bgcolor="#CCCCCC" align="center"><b>Details</b></td>
+  <td width="2%" bgcolor="#CCCCCC" align="center"><b>Lists</b></td>
+  <td width="4%" bgcolor="#e681a6" align="center">ID<a href="index.php?action=comenzi&order=id_order&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=comenzi&order=id_order&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></td>
+    <td width="20%" bgcolor="#e681a6" align="center"><b>Client Name</b><a href="index.php?action=comenzi&order=numedefamilie&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=comenzi&order=numedefamilie&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></td>
+    <td width="5%" bgcolor="#e681a6" align="center"><b>Client Phone</b></td>
+    <td width="10%" bgcolor="#e681a6" align="center"><b>Client Email</b></td>
+    <td width="8%" bgcolor="#e681a6" align="center"><b>Start</b></td>    
+    <td width="3%" bgcolor="#e681a6" align="center">Pax</td>
+    <td width="10%" bgcolor="#e681a6" align="center"><b>Destination</b></td>
+    <td width="5%" bgcolor="#e681a6" align="center">Ways</td>
+    <td width="10%" bgcolor="#e681a6" align="center">Plecare</td>
+    <td width="3%" bgcolor="#e681a6" align="center">Pax</td>
+    <td width="5%" bgcolor="#e681a6" align="center">Price</td>
+    <td width="2%" bgcolor="#CCCCCC" align="center">Del</td>
+  </tr>
+  {rows}
+  <tr>
+    <td colspan="3" bgcolor="#CCCCCC"><div align="center"><input type="submit" name="Submit" value="Add to Lists"></div></td>
+	<td colspan="8" bgcolor="#e681a6"><div align="center"><b>Bookings List</b></div></td>
+    <td colspan="3" bgcolor="#CCCCCC"><div align="center"><input type="submit" name="Submit" value="Delete Selected"></div></td>
+  </tr>
+ </table>
+ 
+ <p>&nbsp;</p>
+ 
+ </form>
+ 
+ <p align="center">{total} Bookings, page {page} from {pages}.<br>
+  <br>
+  [ <a href="index.php?action=comenzi&page=1&start={start}&end={end}&order={order}&rule={rule}">&lt;&lt; First</a> ] [ <a href="index.php?action=comenzi&page={previous}&start={start}&end={end}&order={order}&rule={rule}">&lt; Previous</a> ] [ <a href="index.php?action=comenzi&page={next}&start={start}&end={end}&order={order}&rule={rule}">Next &gt;</a> ] [ <a href="index.php?action=comenzi&page={pages}&start={start}&end={end}&order={order}&rule={rule}">Last &gt;&gt;</a> ]
+ </p>

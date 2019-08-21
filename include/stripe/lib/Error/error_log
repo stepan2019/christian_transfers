@@ -1,0 +1,9 @@
+[22-Apr-2019 06:18:42 UTC] PHP Fatal error:  Class 'Stripe\Error\Base' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/Idempotency.php on line 6
+[22-Apr-2019 06:18:43 UTC] PHP Fatal error:  Class 'Stripe\Error\InvalidRequest' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/RateLimit.php on line 6
+[22-Apr-2019 06:18:43 UTC] PHP Fatal error:  Class 'Stripe\Error\Base' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/Permission.php on line 6
+[22-Apr-2019 06:18:44 UTC] PHP Fatal error:  Class 'Stripe\Error\Base' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/Authentication.php on line 6
+[22-Apr-2019 06:18:44 UTC] PHP Fatal error:  Class 'Stripe\Error\Base' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/InvalidRequest.php on line 6
+[22-Apr-2019 06:18:44 UTC] PHP Fatal error:  Class 'Stripe\Error\Base' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/SignatureVerification.php on line 6
+[22-Apr-2019 06:18:44 UTC] PHP Fatal error:  Class 'Stripe\Error\Base' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/Card.php on line 6
+[22-Apr-2019 06:18:44 UTC] PHP Fatal error:  Class 'Stripe\Error\Base' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/ApiConnection.php on line 6
+[22-Apr-2019 06:18:44 UTC] PHP Fatal error:  Class 'Stripe\Error\Base' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Error/Api.php on line 6

@@ -1,0 +1,7 @@
+[22-Apr-2019 06:16:18 UTC] PHP Fatal error:  Using $this when not in object context in /home/brgambal/public_html/christiantransfers.eu/include/vars.php on line 8
+[22-Apr-2019 06:16:18 UTC] PHP Notice:  Undefined index: lang in /home/brgambal/public_html/christiantransfers.eu/include/lang_change.php on line 3
+[22-Apr-2019 06:16:18 UTC] PHP Notice:  Undefined index: change_lang_page in /home/brgambal/public_html/christiantransfers.eu/include/lang_change.php on line 13
+[23-Apr-2019 05:38:35 UTC] PHP Notice:  Undefined index: lang in /home/brgambal/public_html/christiantransfers.eu/include/lang_change.php on line 3
+[23-Apr-2019 05:38:35 UTC] PHP Notice:  Undefined index: change_lang_page in /home/brgambal/public_html/christiantransfers.eu/include/lang_change.php on line 13
+[23-Apr-2019 05:38:42 UTC] PHP Fatal error:  Using $this when not in object context in /home/brgambal/public_html/christiantransfers.eu/include/vars.php on line 8
+[23-Apr-2019 05:38:43 UTC] PHP Fatal error:  Using $this when not in object context in /home/brgambal/public_html/christiantransfers.eu/include/vars.php on line 8

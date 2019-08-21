@@ -1,0 +1,90 @@
+<div class="text">
+<div class="campuri">
+<form name="form1" action="index.php?action=do_edit_unitate" method="post" enctype="multipart/form-data">
+<input type="hidden" name="id_unitate" value="{id_unitate}"><input type="hidden" name="id_user" value="{id_user}">
+<table align="center" class="campuri" border="0" width="690" cellspacing="3" cellpadding="0">
+  <tr><td colspan="2" align="center">EDITEAZA RESTAURANT / PIZZERIE / CAFENEA / BAR / CLUB</td></tr>
+  <tr><td>{error}</td></tr>
+  <tr><td colspan="2" width="100%" align="center" bgcolor="#C5D2FC" height="20">Detalii Utilizator</td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Nr. Contract</td>
+  <td align="left"><b>{nr_contract}</b></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Email</td>
+  <td align="left"><input type="text" name="email" size="30" value="{email}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Parola</td>
+  <td align="left"><input type="text" name="parola" value="{parola}" size="30"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Repeta parola</td>
+  <td align="left"><input type="text" name="parolar" value="{parola}" size="30"></td></tr>
+<tr><td colspan="2" width="100%" align="center" bgcolor="#C5D2FC" height="20">Detalii Utilizator</td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Denumire firma</td>
+  <td height="33"><input type="text" name="nume_firma" size="30" maxlength="100" value="{nume_firma}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Cod unic de inregistrare</td>
+<td><input type="text" name="cod_unic" size="30" maxlength="25" value="{cod_unic}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Registrul comertului</td>
+  <td><input type="text" name="nr_reg_com" size="30"maxlength="25" value="{nr_reg_com}"></td></tr>
+  <tr><td align="right"><font color="#FF0000">*</font> Persoana de contact</td>
+  <td><input type="text" name="pers_contact" size="30"maxlength="100" value="{pers_contact}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Functia</td>
+  <td><input type="text" name="functia" size="30"maxlength="100" value="{functia}"></td></tr>
+<tr><td align="right">Telefon fix</td><td><input type="text" name="tel_fix" size="30" maxlength="15"value="{tel_fix}"></td></tr>
+<tr><td align="right">Telefon mobil</td><td><input type="text" name="tel_mobil" size="30" maxlength="15"value="{tel_mobil}"></td></tr>
+<tr><td align="right">Fax</td><td><input name="fax_user" type="text" size="30" maxlength="15"value="{fax_user}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Adresa</td>
+<td><input type="text" name="adresa_firma" size="30" maxlength="100" value="{adresa_firma}"></td></tr>
+<tr><td colspan="2" align="center" bgcolor="#C5D2FC" height="20">Detalii Unitate</td></tr>
+<tr><td align="right"><b>Data expirare</b></td><td><input name="data_expirare" type="text" size="30" maxlength="15" value="{data_expirare}"></td></tr>
+<tr><td colspan="2" align="left" height="50"><font color="#FF0000">*</font>Tip unitate</td></tr>
+<tr><td colspan="2" align="center"><table class="campuri" align="center" cellspacing=2 cellpadding=0 width=500>
+<tr>{tip_unitate}<td>&nbsp;</td></tr></table></td></tr>
+
+<tr><td colspan="2" align="left" height="50"><font color="#FF0000">*</font>Zona</td></tr>
+<tr><td colspan="2" align="center"><table class="campuri" align="center" cellspacing=2 cellpadding=0 width=500>
+<tr>{zona}<td>&nbsp;</td></tr></table></td></tr>
+
+<tr><td colspan="2" align="left" height="50"><font color="#FF0000">*</font>Specific</td></tr>
+<tr><td colspan="2" align="center"><table class="campuri" align="center" cellspacing=2 cellpadding=0 width=500>
+<tr>{specific}<td>&nbsp;</td></tr></table></td></tr>
+<tr><td colspan="2">Click <a href="http://tools.freeside.sk/geolocator/geolocator.html" target="_blank"> AICI </a> pentru a gasi coordonatele geografice pentru a arata unitatea pe harta</td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Latitudine</td>
+	<td align="left"><input type="text" name="latitudine" size="30" value="{latitudine}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Longitudine</td>
+	<td align="left"><input type="text" name="longitudine" size="30" value="{longitudine}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Denumire unitate</td>
+	<td align="left"><input type="text" name="nume_unitate" size="30" value="{nume_unitate}"></td></tr>
+<tr><td align="right" valign="top">Descriere Romana</td>
+	<td align="left"><textarea rows="5" name="descriere_ro" cols="40">{descriere_ro}</textarea></td></tr>
+<tr><td align="right" valign="top">Descriere Engleza</td>
+	<td align="left"><textarea rows="6" name="descriere_en" cols="40">{descriere_en}</textarea></td></tr>
+<!--<tr><td align="right"><font color="#FF0000">*</font>Categorie</td>
+	<td align="left"><select size="1" name="stele"><option selected value="{stele}">{stele}</option>
+	<option value="1 stea" >1 stea</option><option value="2 stele">2 stele</option><option value="3 stele">3 stele</option>
+	<option value="4 stele">4 stele</option><option value="5 stele">5 stele</option></select></td></tr>-->
+<tr><td align="right">Adresa</td><td align="left"><input type="text" name="adresa" size="30" maxlength="150" value="{adresa}"></td></tr>
+<!--<tr><td align="right">Localitatea</td><td>{localitate_pensiune}</td></tr>-->
+<tr><td align="right">Telefon1</td><td align="left"><input type="text" name="telefon1" size=30 maxlength="15" value="{telefon1}"></td></tr>
+<tr><td align="right">Telefon2</td><td align="left"><input type="text" name="telefon2" size=30 maxlength="15" value="{telefon2}"></td></tr>
+<tr><td align="right">Fax</td><td align="left"><input type="text" name="fax" size="30" maxlength="20" value="{fax}"></td></tr>
+<tr><td align="right">Orar</td><td align="left"><input type="text" name="orar" size="19" value="{orar}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Capacitate</td><td align="left"><input type="text" name="capacitate" size="19" maxlength="20" value="{capacitate}"></td></tr>
+<tr><td align="right">Email rezervari</td><td align="left"><input type="text" name="email_rezervari" size="30" maxlength="200" value="{email_rezervari}"></td></tr>
+<tr><td align="right">Pagina web</td><td align="left"><input type="text" name="site_web" size="30" maxlength="200" value="{site_web}"></td></tr>
+
+<tr><td align="right">Comentarii Romana</td>
+	<td align="left"><input type="text" name="comentarii_ro" size="30" maxlength="300" value="{comentarii_ro}"></td></tr>
+<tr><td align="right">Comentarii Engleza</td>
+	<td align="left"><input type="text" name="comentarii_en" size="30" maxlength="300" value="{comentarii_en}"></td></tr>
+<tr><td colspan="2" align="left" height="50">Facilitati</td></tr>
+<tr><td colspan="2" align="center"><table class="campuri" align="center" cellspacing=2 cellpadding=0 width=500>
+<tr>{facilitati}<td>&nbsp;</td></tr></table></td></tr>
+<tr><td align="right">Carti de credit acceptate</td>
+    <td valign="middle"><input type="checkbox" name="visa" {visa_checked}>VISA&nbsp;<input type="checkbox" name="mastercard" {mastercard_checked}>MASTER CARD</td></tr>
+<tr><td align="right">Alte carti de credit acceptate:</td>
+	<td align="left"><input type="text" maxlength="1000" name="alte_carti_credit" size="30" value="{alte_carti_credit}"></td></tr>
+<!--<tr><td align="right">Adresa de mail pentru rezervari online</td>
+	<td align="left"><input type="text" name="mail_rez_online" size="30" value="{mail_rez_online}"></td></tr>-->
+	<tr><td align="right">VIP Apare in primele 4 de sus ? 0=Nu, 1=Da</td>
+	<td align="left"><input type="text" name="vip" size="30" value="0"></td></tr>
+
+<tr><td colspan="2" align="left">Incarcati imagini mai mici, de marime pana la 640x 480 pixeli pentru o incarcare mai rapida a paginii cu unitatea dumneavoastra.</td></tr>
+{poze_existente}
+{poza1}{poza2}{poza3}{poza4}{poza5}{poza6}{poza7}{poza8}{poza9}
+<tr><td colspan="2" align="center" height="50"><INPUT type=submit value="Trimite Date"></td></tr></table></form>

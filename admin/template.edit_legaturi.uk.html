@@ -1,0 +1,17 @@
+<div class="text">
+<div class="campuri">
+<form name="form1" action="index.php?action=do_edit_legaturi_uk" method="post">
+<table align="center" class="campuri" border="0" width="690" cellspacing="3" cellpadding="0">
+  <tr><td colspan="2" align="center">EDITEAZA LEGATURI UK DINTRE <b>{nume_aeroport}</b> SI <b>{nume_destinatie}</b></td></tr>
+  <tr><td colspan="2"><font color="red">{error}</font></td></tr>
+  <tr><td align="right"><font color="#FF0000">*</font>Distanta (km)</td><td><input type="text" name="km" size="30" value="{km}"></td></tr>
+
+<tr><td align="right"><font color="#FF0000">*</font>Durata</td>
+  <td align="left"><input type="text" name="timp" size="30" value="{timp}"></td></tr>
+<tr><td align="right" valign="top"><font color="#FF0000">*</font>Titlu Pagina</td>
+  <td align="left"><textarea name="titlu_pagina" cols="50" rows="3">{titlu_pagina}</textarea></td></tr>
+<tr><td align="right" valign="top"><font color="#FF0000">*</font>Meta Pagina</td>
+  <td align="left"><textarea name="meta_pagina" cols="50" rows="3">{meta_pagina}</textarea></td></tr>
+<tr><td colspan="2" align="center" height="50"><INPUT type=submit value="Trimite"></td></tr></table>
+<input type="hidden" name="id_legaturi" value="{id_legaturi}">
+</form></div></div>

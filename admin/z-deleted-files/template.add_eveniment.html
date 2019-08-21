@@ -1,0 +1,25 @@
+<div class="text">
+<div class="campuri">
+<form name="form1" action="index.php?action=do_add_eveniment" method="post" enctype="multipart/form-data">
+<table align="center" class="campuri" border="0" width="690" cellspacing="3" cellpadding="0">
+  <tr><td colspan="2" align="center">ADAUGA / MODIFICA EVENIMENT</td></tr>
+  <tr><td>{error}</td></tr>
+  <tr><td colspan="2" width="100%" align="center" bgcolor="#C5D2FC" height="20">Detalii Eveniment</td></tr>
+  <tr><td height="10">&nbsp;</td></tr>  
+<tr><td align="right"><font color="#FF0000">*</font>Titlu</td>
+  <td align="left"><input type="text" name="titlu" size="30" value="{titlu}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Titlu Engleza</td>
+  <td align="left"><input type="text" name="titlu_en" size="30" value="{titlu_en}"></td></tr>  
+<tr><td align="right" valign="top"><font color="#FF0000">*</font>Descriere</td>
+	<td align="left"><textarea rows="10" name="mesaj" cols="40">{mesaj}</textarea></td></tr>
+<tr><td align="right" valign="top"><font color="#FF0000">*</font>Descriere Engleza</td>
+	<td align="left"><textarea rows="10" name="mesaj_en" cols="40">{mesaj_en}</textarea></td></tr>
+	<tr><td align="right" valign="top">Eveniment VIP<br>Apare in evenimentele recomandate ?<br>0=Nu, 1=Da</td>
+	<td align="left" valign="top"><input type="text" name="eveniment_vip" size="30" value="{eveniment_vip}"></td></tr>
+	<tr><td align="right">Eveniment VIP expira la data</td><td><input type="text" name="end_eveniment_vip" value="{end_eveniment_vip}"></td></tr>
+	<input type="hidden" name="id_unitate" value="{id_unitate}">
+	<tr><td colspan="2" align="left"><br>Incarcati imagine mai mica, de marime pana la 640 x 480 pixeli pentru o incarcare mai rapida a paginii cu unitatea.<br><br></td></tr>
+{poze_existente}
+{poza1}
+<tr><td colspan="2" align="center" height="50"><INPUT type=submit value="Trimite Date"></td></tr></table>
+</form></div></div>

@@ -1,0 +1,21 @@
+<div class="text">
+<div class="campuri">
+<form name="form1" action="index.php?action=do_add_terase" method="post" enctype="multipart/form-data">
+<table align="center" class="campuri" border="0" width="690" cellspacing="3" cellpadding="0">
+  <tr><td colspan="2" align="center">ADAUGA / MODIFICA DATE TERASA {nume_unitate}</td></tr>
+  <tr><td colspan="2"><font color="red">{error}</font></td></tr>
+  <tr><td colspan="2" width="100%" align="center" bgcolor="#C5D2FC" height="20">Detalii Terasa</td></tr>
+  <tr><td height="10">&nbsp;</td></tr>  
+<tr><td align="right"><font color="#FF0000">*</font>Capacitate</td>
+  <td align="left"><input type="text" name="capacitate_terasa" size="30" value="{capacitate_terasa}"></td></tr>
+<tr><td align="right" valign="top"><font color="#FF0000">*</font>Descriere</td>
+	<td align="left"><textarea rows="10" name="descriere_ro" cols="40">{descriere_ro}</textarea></td></tr>
+<tr><td colspan="2" align="left" height="50">Facilitati</td></tr>
+<tr><td colspan="2" align="center"><table class="campuri" align="center" cellspacing=2 cellpadding=0 width=500>
+<tr>{facilitati}<td>&nbsp;</td></tr></table></td></tr>
+	<input type="hidden" name="id_unitate" value="{id_unitate}">
+<tr><td colspan="2" align="left"><br>Incarcati imagini mai mici, de marime pana la 640x 480 pixeli pentru o incarcare mai rapida a paginii cu unitatea dumneavoastra.<br><br></td></tr>
+{poze_existente}
+{poza1}{poza2}{poza3}{poza4}
+<tr><td colspan="2" align="center" height="50"><INPUT type=submit value="Trimite Date"></td></tr></table>
+</form></div></div>

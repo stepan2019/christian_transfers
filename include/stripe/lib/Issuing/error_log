@@ -1,0 +1,6 @@
+[22-Apr-2019 06:25:45 UTC] PHP Fatal error:  Class 'Stripe\ApiResource' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Issuing/Card.php on line 29
+[22-Apr-2019 06:25:45 UTC] PHP Fatal error:  Class 'Stripe\ApiResource' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Issuing/CardDetails.php on line 19
+[22-Apr-2019 06:25:45 UTC] PHP Fatal error:  Class 'Stripe\ApiResource' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Issuing/Transaction.php on line 26
+[22-Apr-2019 06:25:45 UTC] PHP Fatal error:  Class 'Stripe\ApiResource' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Issuing/Authorization.php on line 35
+[22-Apr-2019 06:25:45 UTC] PHP Fatal error:  Class 'Stripe\ApiResource' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Issuing/Cardholder.php on line 23
+[22-Apr-2019 06:25:45 UTC] PHP Fatal error:  Class 'Stripe\ApiResource' not found in /home/brgambal/public_html/christiantransfers.eu/include/stripe/lib/Issuing/Dispute.php on line 23

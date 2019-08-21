@@ -1,0 +1,54 @@
+{include file='../common/header.phtml'}
+<div class="wrap">
+    <div class="row">
+        <div style="font-size:20px;font-weight:bold;padding:15px;min-height:300px;">
+            <p style="{if $actionlp==0}padding-top:100px;color:black;text-align:center;{else}color:red;{/if}text-align:center;width:100%">{$mesaj}
+                {if $actionlp==0}
+                <script src="http://code.jquery.com/jquery-latest.min.js"
+                type="text/javascript"></script>
+                <script type="text/javascript">
+                    {
+                        literal
+                    }
+                    function delayer() {
+                        window.location = "http://www.christiantransfers.eu";
+                    }
+                    $(document).ready(function () {
+                        setTimeout('delayer()', 10000);
+                    });
+                    {
+                        /literal}
+                </script>
+                <span style="font-size:12px;padding-top:30px;clear:left;"><br /><br /><br />You will be automatically redirected to our homepage in 10 seconds.</span>
+                {/if}
+            </p>
+            {if $eroarePlata=='1'}
+            <form action="https://paysecure.ro/order/cgi-bin/" method="post" >
+                <input type="submit"  value="Please try to pay again by clicking on the payment button" style="border:1px solid #284F7C;color:#284F7C;padding:5px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;margin-left:300px;" />
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:700px;padding:20px 0;font-size:16px">
+                    {$error}
+                    <tr><td style="padding-top: 10px; padding-bottom: 10px;" bgcolor="#c90000" valign="top">
+                            <table width="200" border="0" cellpadding="5" cellspacing="0" class="small-border-pg3">
+                                <tr><td colspan="2" class="text_articol_1"><b>Secure online payment procesed by PaySecure.ro</b></td></tr>	    
+                                <tr><td>Description</td><td><input size="55" readonly type="text" name="DESC" value="{$descrip}" /></td></tr>
+                                <tr><td>Price</td><td><input size="55" readonly type="text" name="AMOUNT" value="{$price}" /></td></tr>
+                                <tr><td>Currency</td><td><input size="55" readonly type="text" name="CURRENCY" value="{$currency}" /></td></tr>
+                                <tr><td>ID Order</td><td><input size="55" readonly type="text" name="ORDER" value="{$id_order}" /></td></tr>
+                                <tr><td>Your email</td><td><input size="55" readonly type="text" name="PENTRU" value="{$email}" /></td></tr>
+                                <tr><td>CUI</td><td><input size="55" readonly type="text" name="cui" value="29157390" /></td></tr>
+                            </table>
+                        </td></tr>
+                </table>
+                <input size="55" type="hidden" name="TRTYPE" value="{$trtype}" />
+                <input size="55" type="hidden" name="BACKREF" value="{$return_url}" />
+                <input size="55" type="hidden" name="TIMESTAMP" value="{$time}" />
+                <input size="55" type="hidden" name="P_SIGN" value="{$calculate_sign}" />
+                <input type="hidden" name="LANG" value="en" /><br>
+                <input type="submit"  value="Please try to pay again by clicking on the payment button" style="margin-left:300px;border:1px solid #284F7C;color:#284F7C;padding:5px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;" />
+            </form>
+            {/if}
+            <div class="clear" style="height:40px;"></div>
+        </div>
+    </div>
+</div>
+{include file='../common/footer.phtml'}

@@ -1,0 +1,32 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Numar Statii UK - total: {total} | <a href="index.php?action=add_statii_uk">Adauga Statie UK</a></h3>
+
+<form name="form1" method="post" action="index.php?action=delete_statii_uk">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="10%" bgcolor="#CCCCCC">Edit</td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>ID<a href="index.php?action=statii_uk&order=id_statie&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=statii_uk&order=id_statie&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Nume Statie<a href="index.php?action=statii_uk&order=nume_statie&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=statii_uk&order=nume_statie&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+   <td width="3%" bgcolor="#CCCCCC"><h5>Del</h5></td>
+  </tr>
+  {rows}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+    <input type="hidden" name="id_legaturi" value="{id_legaturi}">
+        <input type="submit" name="Submit" value="Sterge selectate">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<!--</form>-->

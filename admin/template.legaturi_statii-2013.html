@@ -1,0 +1,45 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Numar Statii {nume_aeroport} - {nume_destinatie}: {total} | <a href="index.php?action=add_legaturi_statii&id_legaturi={id_legaturi}">Adauga Legatura Statie</a></h3>
+
+<form name="form1" method="post" action="index.php?action=delete_legaturi_statii">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="5%" bgcolor="#CCCCCC">Edit</td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>ID<a href="index.php?action=legaturi_statii&order=id_legatura_statie&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii&order=id_legatura_statie&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Ora Pornire<a href="index.php?action=legaturi_statii&order=ora_pornire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii&order=ora_pornire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Statie Pornire<a href="index.php?action=legaturi_statii&order=nume_statie_pornire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii&order=nume_statie_pornire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Descriere Statie Pornire<a href="index.php?action=legaturi_statii&order=descriere_pornire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii&order=descriere_pornire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Ora Sosire<a href="index.php?action=legaturi_statii&order=ora_sosire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii&order=ora_sosire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Statie Sosire<a href="index.php?action=legaturi_statii&order=nume_statie_sosire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii&order=nume_statie_sosire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Descriere Statie Sosire<a href="index.php?action=legaturi_statii&order=descriere_sosire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii&order=descriere_sosire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Pret<a href="index.php?action=legaturi_statii&order=pret&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii&order=pret&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+   <td width="3%" bgcolor="#CCCCCC"><h5>Retur</h5></td>
+   <td width="3%" bgcolor="#CCCCCC"><h5>Del</h5></td>
+  </tr>
+  {rows}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+        <input type="hidden" name="id_legaturi" value="{id_legaturi}">
+        <input type="submit" name="Submit" value="Sterge selectate">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<!--</form>-->

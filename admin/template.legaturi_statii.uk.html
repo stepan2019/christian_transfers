@@ -1,0 +1,75 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Numar Statii UK {nume_aeroport} - {nume_destinatie}: {total} | <a href="index.php?action=add_legaturi_statii_uk&id_legaturi={id_legaturi}">Adauga Legatura Statie UK</a></h3>
+
+<form name="form1" method="post" action="index.php?action=delete_legaturi_statii_uk">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="5%" bgcolor="#CCCCCC">Edit</td>
+    <td width="9%" bgcolor="#CCCCCC"><h5>ID<a href="index.php?action=legaturi_statii_uk&order=id_legatura_statie&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii_uk&order=id_legatura_statie&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Ora Pornire<a href="index.php?action=legaturi_statii_uk&order=ora_pornire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii_uk&order=ora_pornire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Statie Pornire<a href="index.php?action=legaturi_statii_uk&order=nume_statie_pornire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii_uk&order=nume_statie_pornire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Descriere Statie Pornire<a href="index.php?action=legaturi_statii_uk&order=descriere_pornire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii_uk&order=descriere_pornire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Ora Sosire<a href="index.php?action=legaturi_statii_uk&order=ora_sosire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii_uk&order=ora_sosire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Statie Sosire<a href="index.php?action=legaturi_statii_uk&order=nume_statie_sosire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii_uk&order=nume_statie_sosire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Descriere Statie Sosire<a href="index.php?action=legaturi_statii_uk&order=descriere_sosire&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii_uk&order=descriere_sosire&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+    <td width="11%" bgcolor="#CCCCCC"><h5>Pret<a href="index.php?action=legaturi_statii_uk&order=pret&rule=desc"><img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=legaturi_statii_uk&order=pret&rule=asc"><img src="../images/up.GIF" width="10" height="10" border="0"></a></h5>
+    </td>
+   <td width="3%" bgcolor="#CCCCCC"><h5>Retur</h5></td>
+   <td width="3%" bgcolor="#CCCCCC"><h5>Del</h5></td>
+  </tr>
+  {rows}
+  <tr>
+    <td><div align="center"> </div>
+    </td>
+    <td><div align="center">
+        <input type="hidden" name="id_legaturi" value="{id_legaturi}">
+        <input type="submit" name="Submit" value="Sterge selectate">
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</form>
+
+<form name="form1" action="index.php?action=do_edit_preturi_uk" method="post">
+<table align="center" class="campuri" border="0" width="690" cellspacing="3" cellpadding="0">
+<tr><td colspan="2"><font color="red">{error}</font></td></tr>
+<tr style="{zile_nu_circula}"><td align="right">Zile in care nu circula</td>
+    <td align="left"><input type="checkbox" name="day0" value="0" {checked0}> Duminica</td></tr>
+<tr style="{zile_nu_circula}"><td></td><td align="left"><input type="checkbox" name="day1" value="1" {checked1}> Luni</td></tr>
+<tr style="{zile_nu_circula}"><td></td><td align="left"><input type="checkbox" name="day2" value="2" {checked2}> Marti</td></tr>
+<tr style="{zile_nu_circula}"><td></td><td align="left"><input type="checkbox" name="day3" value="3" {checked3}> Miercuri</td></tr>
+<tr style="{zile_nu_circula}"><td></td><td align="left"><input type="checkbox" name="day4" value="4" {checked4}> Joi</td></tr>
+<tr style="{zile_nu_circula}"><td></td><td align="left"><input type="checkbox" name="day5" value="5" {checked5}> Vineri</td></tr>
+<tr style="{zile_nu_circula}"><td></td><td align="left"><input type="checkbox" name="day6" value="6" {checked6}> Sambata</td></tr>
+  <input type="hidden" name="id_auto" value="0">
+  <input type="hidden" name="id_legaturi" value="{id_legaturi}">
+<tr><td colspan="2" align="center" height="50"><INPUT type=submit value="Trimite"></td></tr></table>
+</form></div></div>
+
+<div class="campuri" style="{zile_nu_circula}">Test: <input type="text" name="ziua" id="ziua"></div>
+
+<script type="text/javascript">	
+$(document).ready(function() {
+    var date = new Date();
+    $("#ziua").datepicker({
+                beforeShowDay: function(date) {
+                    var day = date.getDay();
+                    return [({removed_days})];
+                }
+	});
+});
+</script>

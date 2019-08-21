@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /www/
+Allow: /
+
+Sitemap: https://christiantransfers.eu/site-map/sitemaps.xml
+Sitemap: http://christiantransfers.eu/site-map/sitemaps.xml
+Sitemap: https://www.christiantransfers.eu/site-map/sitemaps.xml
+Sitemap: http://www.christiantransfers.eu/site-map/sitemaps.xml
+
+Sitemap: https://christiantransfers.eu/site-map/sitemapsstatice.xml
+Sitemap: http://christiantransfers.eu/site-map/sitemapsstatice.xml
+Sitemap: https://www.christiantransfers.eu/site-map/sitemapsstatice.xml
+Sitemap: http://www.christiantransfers.eu/site-map/sitemapsstatice.xml

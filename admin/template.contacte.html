@@ -1,0 +1,47 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+
+ <h3>Contact page Messages = {total}</h3>
+ 
+ <form name="form1" method="post" action="index.php?action=delete_contacte">
+ 
+ <table width="100%" border="1" align="center" cellpadding="1" cellspacing="1">
+   <tr>
+    <td colspan="15">
+	   <div align="right" style="padding:10px;">
+        <input style="border:1px solid #f00;padding:10px;" type="submit" name="Submit" value="Delete Message">
+       </div>
+    </td>
+   </tr>
+   <tr>
+    <td width="12%" bgcolor="#CCCCCC"><b>ID</b></td>
+    <td width="10%" bgcolor="#CCCCCC"><b>Customer Name</b></td>
+    <td width="6%" bgcolor="#CCCCCC"><b>Subject</b></td>
+    <td width="7%" bgcolor="#CCCCCC"><b>Message</b></td>
+    <td width="5%" bgcolor="#CCCCCC">Date</td>
+    <td width="5%" bgcolor="#CCCCCC">Passenger</td>
+    <td width="5%" bgcolor="#CCCCCC">Vehicle</td>
+    <td width="5%" bgcolor="#CCCCCC">Start</td>
+    <td width="5%" bgcolor="#CCCCCC">Destination</td>
+    <td width="5%" bgcolor="#CCCCCC">Date</td>
+    <td width="4%" bgcolor="#CCCCCC">Passenger</td>
+    <td width="4%" bgcolor="#CCCCCC">Vehicle</td>
+    <td width="4%" bgcolor="#CCCCCC">Start</td>
+    <td width="4%" bgcolor="#CCCCCC">Destination</td>  
+    <td width="4%" bgcolor="#CCCCCC">Delete</td>     
+  </tr>
+  {rows}
+  <tr>
+    <td colspan="15">
+	   <div align="right" style="padding:10px;">
+        <input style="border:1px solid #f00;padding:10px;" type="submit" name="Submit" value="Delete Message">
+       </div>
+    </td>
+  </tr>
+ </table>
+ <p></p>
+ </form>

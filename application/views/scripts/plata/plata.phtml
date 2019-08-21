@@ -1,0 +1,73 @@
+{include file='../common/header.phtml'}
+
+<table cellpadding="0" cellspacing="0"><tr><td width="250"><h2>Your booking details</h2></td><td width="700" align="center">
+<table><tr><td style="padding:0 10px;">Car <img style="vertical-align:middle;" src="/images/checked1.jpg" title="Car already been chosen at Step 1"></td>
+    <td style="padding:0 10px;">Details <img style="vertical-align:middle;" src="/images/checked1.jpg" title="Details already filed at Step 2"></td>
+    <td style="padding:0 10px;"><b>Online Payment</b> <img style="vertical-align:middle;" src="/images/checked2.jpg" title="Step 3 = Complete online payment details and by card"></td></tr></table></td></tr>
+</table>
+<div class="col1" style="width:95%;">
+
+<table><tr><td width="100px">
+<form action="https://secure.worldpay.com/wcc/purchase" method="POST">
+    <input type="hidden" name="testMode" value="0">
+    <input type="hidden" name="instId" value="{$worldpay_id}">
+    <input type="hidden" name="cartId" value="1">
+    <input type="hidden" name="amount" value="{$price}">
+    <input type="hidden" name="currency" value="{$worldpay_currency}">
+    <input type="hidden" name="desc" value="{$description}">
+    <!--<input type="hidden" name="MC_id_order" value="{$id_order}">-->
+    <input type="submit" value="Go to payment page">
+    </form>
+</td></tr></table>
+    
+    <table><tr><td width="100px">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:80px;">
+{$error}
+<tr><td><h1><span>ChristianTransfers.eu - booking summary</span></h1></td></tr>
+<tr><td style="padding-top: 10px; padding-bottom: 10px;" bgcolor="#C90000" valign="top">
+            <table width="100" border="0" cellpadding="5" cellspacing="0" class="small-border-pg3">
+            <tr><td colspan="2" class="text_articol_1"><b></b></td></tr>	    
+                    <tr><td>Description</td><td><input size="50" readonly type="text" name="DESC" value="{$description}" /></td></tr>
+                    <tr><td>Date</td><td><input size="50" readonly type="text" name="" value="{$flight_1}" /></td></tr>
+                    {$return_transfer}
+                    <tr><td>Price</td><td><input size="50" readonly type="text" name="AMOUNT" value="{$price} {$currency}" /></td></tr>
+                    <tr><td>ID Order</td><td><input size="50" readonly type="text" name="ORDER" value="{$id_order}" /></td></tr>
+                    <tr><td>Your email</td><td><input size="50" readonly type="text" name="PENTRU" value="{$email}" /></td></tr>
+
+        </table>
+</td></tr>
+</table>
+
+</td>
+<td width="50px">
+&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+
+<table><tr><td width="100px">
+<form action="https://secure.worldpay.com/wcc/purchase" method="POST">
+    <input type="hidden" name="testMode" value="0">
+    <input type="hidden" name="instId" value="{$worldpay_id}">
+    <input type="hidden" name="cartId" value="1">
+    <input type="hidden" name="amount" value="{$price}">
+    <input type="hidden" name="currency" value="{$worldpay_currency}">
+    <input type="hidden" name="desc" value="{$description}">
+<!--    <input type="hidden" name="MC_id_order" value="{$id_order}">-->
+    <input type="submit" value="Go to payment page">
+    </form>
+</td></tr></table>
+
+<br><br>
+<p><font color="#C90000"><strong>
+- Bookings without the payments will can't be processed.<br>
+- We sent you the booking you made to the email registered at the previous step (please check the spam folder also).<br> 
+- After you'll complete the online payment by card you will receive the payment confirmation by email from payment processor company.<br>
+- Confirmation or infirmation of the service you booked will be sent by email by one of our agent.<br>
+- We DO NOT keep records with sensitive card details, they'll be saved by payment processor company on their website.
+</strong></font></p>
+</div>
+	</div>
+	</section>
+</div>
+{include file='../common/footer.phtml'}

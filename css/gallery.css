@@ -1,0 +1,32 @@
+/* * {box-sizing:border-box;} body {background-color: #f1f1f1;padding: 20px;font-family: Arial;} */
+
+/* Center website */
+.maingallery {max-width:90%;margin:auto;}
+
+/*h1 {font-size:50px;word-break:break-all;}*/
+
+.rowgallery {margin:8px -16px;}
+
+/* Add padding BETWEEN each column (if you want) */
+.rowgallery, .rowgallery > .columngallery {padding:8px;}
+
+/* Create four equal columns that floats next to each other */
+.columngallery {float:left;width:25%;}
+
+/* Clear floats after rows */ 
+.rowgallery:after {content:"";display:table;clear:both;}
+
+/* Content */
+.contentgallery {background-color:white;padding:10px;}
+
+.contentgallery a{text-decoration:none;color:black;}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .columngallery {width: 50%;}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columngallery {width: 100%;}
+}

@@ -1,0 +1,18 @@
+<div class="text">
+<div class="campuri">
+<form name="form1" action="index.php?action=do_edit_destinatie" method="post">
+<table align="center" class="campuri" border="0" width="690" cellspacing="3" cellpadding="0">
+  <tr><td colspan="2" align="center">EDITEAZA DESTINATIE</td></tr>
+  <tr><td colspan="2"><font color="red">{error}</font></td></tr>
+  
+<tr><td align="right"><font color="#FF0000">*</font>Label destinatie</td>
+  <td align="left"><input type="text" name="label" size="30" value="{label}"></td><td>Airport Romania</td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Nume destinatie</td>
+  <td align="left"><input type="text" name="nume_destinatie" size="30" value="{nume_destinatie}"></td><td>Ex. Poiana Brasov</td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Url destinatie</td>
+  <td align="left"><input type="text" name="url_destinatie" size="30" value="{url_destinatie}"></td><td>Ex. poiana_brasov</td></tr>
+  <tr><td colspan="2">Extra Informatii</td></tr>
+  <tr><td colspan="2"><textarea id="textarea_id1" name="extra_info" cols="60" rows="5">{extra_info}</textarea></td></tr>
+  <input type="hidden" name="id_destinatie" value="{id_destinatie}">
+<tr><td colspan="2" align="center" height="50"><INPUT type=submit value="Trimite"></td></tr></table>
+</form></div></div>

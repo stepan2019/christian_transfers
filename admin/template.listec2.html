@@ -1,0 +1,47 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<h3>Total Bookings = {total}</h3>
+
+<p align="center">{total} Bookings in this list. <!--Page {page} from {pages} --><br>
+  <br>
+  [ <a href="index.php?action=listac&page=1&start={start}&end={end}&order={order}&rule={rule}">&lt;&lt; First</a> ] [ <a href="index.php?action=listac&page={previous}&start={start}&end={end}&order={order}&rule={rule}">&lt; Previous</a> ] [ <a href="index.php?action=listac&page={next}&start={start}&end={end}&order={order}&rule={rule}">Next &gt;</a> ] [ <a href="index.php?action=listac&page={pages}&start={start}&end={end}&order={order}&rule={rule}">Last &gt;&gt;</a> ]
+</p>
+<form name="form1" method="post" action="index.php?action=delete_comenzi_lista">
+<table width="100%" border="1" align="center" cellpadding="5" cellspacing="1">
+<tr>
+   <td width="12%" bgcolor="#CCCCCC" align="center"><b>Bookings ID<a href="index.php?action=listec&order=id_order&rule=desc">
+  <img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=listec&order=id_order&rule=asc">
+  <img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="12%" bgcolor="#e681a6" align="center"><b>Airport<a href="index.php?action=listec&order=&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=listec&order=&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+    <td width="12%" bgcolor="#e681a6" align="center"><b>Destination<a href="index.php?action=listec&order=&rule=desc">
+	<img src="../images/down.GIF" width="10" height="10" border="0"></a><a href="index.php?action=listec&order=&rule=asc">
+	<img src="../images/up.GIF" width="10" height="10" border="0"></a></b>
+    </td>
+	<td width="12%" bgcolor="#e681a6" align="center">Date/Hour</td>
+    <td width="20%" bgcolor="#e681a6" align="center">Client Name</td>
+    <td width="5%" bgcolor="#e681a6" align="center">Seats</td>    
+    <td width="5%" bgcolor="#e681a6" align="center">Return</td>
+    <td width="23%" bgcolor="#CCCCCC" align="center">Add private notice</td>
+  </tr>
+  {rows}
+  <tr>
+      <td colspan="7"><div></div></td>
+      <td><div align="center"><input type="submit" name="Submit" value="Add or Update Notice"></div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<input type="hidden" name="id_lista_hidden" value="{id_lista}">
+</form>
+
+<p align="center">{total} Bookings in this list.  <br>
+  <br>
+  [ <a href="index.php?action=listac&page=1&start={start}&end={end}&order={order}&rule={rule}">&lt;&lt; First</a> ] [ <a href="index.php?action=listac&page={previous}&start={start}&end={end}&order={order}&rule={rule}">&lt; Previous</a> ] [ <a href="index.php?action=listac&page={next}&start={start}&end={end}&order={order}&rule={rule}">Next &gt;</a> ] [ <a href="index.php?action=listac&page={pages}&start={start}&end={end}&order={order}&rule={rule}">Last &gt;&gt;</a> ]
+</p>

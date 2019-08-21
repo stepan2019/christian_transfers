@@ -1,0 +1,127 @@
+{include file='../common/header.phtml'}
+<div class="text">
+<div class="campuri">
+<form name="form1" action="{$dosignup}" method="post" enctype="multipart/form-data">
+<table align="center" class="campuri" border="0" width="690" cellspacing="3" cellpadding="0">
+  <tr><td colspan="2" align="center"><h1>{$si_titlu}</h1></td></tr>
+  <tr><td>{$error}</td></tr>
+  <tr><td colspan="2" align="left" valign="top" height="30"><h2>{$si_text1} <a class="site_link_grey" href="{$contact}">{$un_aici}</a>. {$campurile_marcate_cu} <font color="#FF0000">*</font> {$sunt_obligatorii}.</h2></td></tr>
+
+  <tr><td colspan="2" width="100%" align="center" bgcolor="#C5D2FC" height="20"><h1>{$si_utilizator}</h1></td></tr>
+  <tr><td height="10">&nbsp;</td></tr>
+  <tr><td colspan="2" align="left"><h2>{$si_text2}</h2></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>Email</td>
+  <td align="left"><input type="text" name="email" size="30" value="{$email}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$mm_parola}</td>
+  <td align="left"><input type="password" name="parola" size="30"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$si_repeta} {$parola}</td>
+  <td align="left"><input type="password" name="parolar" size="30"></td></tr>
+<tr><td colspan="2" width="100%" align="center" bgcolor="#C5D2FC" height="20"><h1>{$mm_detalii_firma}</h1></td></tr>
+  <tr><td height="10">&nbsp;</td></tr>
+<tr><td align="left" width="100%" colspan="2"><h2>{$si_text3}</h2></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$mm_denumire_firma}</td>
+  <td><input type="text" name="nume_firma" size="30" maxlength="100" value="{$nume_firma}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$mm_cod_inregistrare}</td>
+<td><input type="text" name="cod_unic" size="30" maxlength="25" value="{$cod_unic}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$mm_reg_com}</td>
+  <td><input type="text" name="nr_reg_com" size="30" maxlength="25" value="{$nr_reg_com}"></td></tr>
+  <tr><td align="right">{$mm_persoana_contact}</td>
+  <td><input type="text" name="pers_contact" size="30"maxlength="100" value="{$pers_contact}"></td></tr>
+<tr><td align="right">{$mm_functia}</td>
+  <td><input type="text" name="functia" size="30"maxlength="100" value="{$functia}"></td></tr>
+<tr><td align="right">{$telefon_fix}</td><td><input type="text" name="tel_fix" size="30" maxlength="15"value="{$tel_fix}"></td></tr>
+<tr><td align="right">{$telefon_mobil}</td><td><input type="text" name="tel_mobil" size="30" maxlength="15"value="{$tel_mobil}"></td></tr>
+<tr><td align="right">Fax</td><td><input name="fax_user" type="text" size="30" maxlength="15"value="{$fax_user}"></td></tr>
+<tr><td align="right">{$un_adresa_cp}</td>
+<td><input type="text" name="adresa_firma" size="30" maxlength="100" value="{$adresa_firma}"></td></tr>
+<tr><td align="right">{$un_judet}</td><td>{$judet}</td></tr>
+<tr><td align="right">{$un_oras}</td><td><div id="result"></div></td></tr>
+<tr><td colspan="2" align="center" bgcolor="#C5D2FC" height="20"><h1>{$mm_detalii} Hotel / {$pensiune} / Motel</h1></td></tr>
+<tr><td height="10">&nbsp;</td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$mm_tip_unitate}</td>
+<td align="left"><select size="1" name=tip_unitate><option value=''>{$si_selectati}</option>
+<option value="Hotel">Hotel</option><option value="Motel">Motel</option><option value="Pensiune">{$pensiune}</option></select></td>
+</tr>
+<tr><td colspan="2">{$mm_numai_caractere_alfanumerice}</td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$mm_denumire_unitate}</td>
+	<td align="left"><input type="text" name="nume_unitate" size="30" value="{$nume_unitate}"></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_romana}</td>
+	<td align="left"><textarea rows="4" name="descriere_ro" cols="40">{$descriere_ro}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_engleza}</td>
+	<td align="left"><textarea rows="4" name="descriere_en" cols="40">{$descriere_en}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_franceza}</td>
+	<td align="left"><textarea rows="4" name="descriere_fr" cols="40">{$descriere_fr}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_germana}</td>
+	<td align="left"><textarea rows="4" name="descriere_de" cols="40">{$descriere_de}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_spaniola}</td>
+	<td align="left"><textarea rows="4" name="descriere_es" cols="40">{$descriere_es}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_italiana}</td>
+	<td align="left"><textarea rows="4" name="descriere_it" cols="40">{$descriere_it}</textarea></td></tr>
+<tr><td><br></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_romana_avansata}</td>
+	<td align="left"><textarea rows="4" name="descriere_avansata_ro" cols="50">{$descriere_avansata_ro}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_engleza_avansata}</td>
+	<td align="left"><textarea rows="4" name="descriere_avansata_en" cols="50">{$descriere_avansata_en}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_franceza_avansata}</td>
+	<td align="left"><textarea rows="4" name="descriere_avansata_fr" cols="50">{$descriere_avansata_fr}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_germana_avansata}</td>
+	<td align="left"><textarea rows="4" name="descriere_avansata_de" cols="50">{$descriere_avansata_de}</textarea></td></tr>
+<tr><td align="right" valign="top">{$mm_descriere_spaniola_avansata}</td>
+	<td align="left"><textarea rows="4" name="descriere_avansata_es" cols="50">{$descriere_avansata_es}</textarea></td></tr>		<tr><td align="right" valign="top">{$mm_descriere_italiana_avansata}</td>
+	<td align="left"><textarea rows="4" name="descriere_avansata_it" cols="50">{$descriere_avansata_it}</textarea></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$mm_categorie}</td>
+	<td align="left"><select size="1" name="stele"><option selected value=""></option>
+	<option value="1 stea" >1 {$mm_stea}</option><option value="2 stele">2 {$un_stele}</option><option value="3 stele">3 {$un_stele}</option>
+	<option value="4 stele">4 {$un_stele}</option><option value="5 stele">5 {$un_stele}</option></select></td></tr>
+<tr><td align="right">{$un_adresa}</td><td align="left"><input type="text" name="adresa" size="30" maxlength="150" value="{$adresa}"></td></tr>
+<tr><td align="right"><font color="#FF0000">*</font>{$un_oras}</td><td>{$localitate_pensiune}</td></tr>
+<tr><td align="right">{$un_telefon}1</td><td align="left"><input type="text" name="telefon1" size=30 maxlength="15" value="{$telefon1}"></td></tr>
+<tr><td align="right">{$un_telefon}2</td><td align="left"><input type="text" name="telefon2" size=30 maxlength="15" value="{$telefon2}"></td></tr>
+<tr><td align="right">Fax</td><td align="left"><input type="text" name="fax_pensiune" size="30" maxlength="20" value="{$fax_pensiune}"></td></tr>
+<tr><td align="right">Email {$pensiune}</td><td align="left"><input type="text" name="email_pensiune" size="30" maxlength="200" value="{$email_pensiune}"></td></tr>
+<tr><td align="right">{$un_pagina_web}</td><td align="left"><input type="text" name="site_web" size="30" maxlength="200" value="{$site_web}"></td></tr>
+<tr><td align="right">{$un_pret} single</td><td align="left"><input type="text" name="pret_single" size="19" maxlength="20" value="{$pret_single}">
+    <select size="1" name="moneda_single"><option selected value="LEI">LEI</option><option value="EURO">EURO</option>
+    <option value="USD">USD</option></select></td></tr>
+<tr><td align="right">{$un_pret} double</td><td align="left"><input type="text" name="pret_double" size="19" maxlength="20" value="{$pret_double}">
+    <select size="1" name="moneda_double"><option selected value="LEI">LEI</option>
+    <option value="EURO">EURO</option><option value="USD">USD</option></select></td></tr>
+<tr><td align="right">{$un_pret} {$un_matrimoniala}</td><td align="left"><input type="text" name="pret_matrimoniala" size="19" maxlength="20" value="{$pret_matrimoniala}">
+    <select size="1" name="moneda_matrimoniala"><option selected value="LEI">LEI</option><option value="EURO">EURO</option>
+    <option value="USD">USD</option></select></td></tr>
+<tr><td align="right">{$un_pret} {$un_apartament}</td><td align="left"><input type="text" name="pret_apartament" size="19" maxlength="20" value="{$pret_apartament}">
+    <select size="1" name="moneda_apartament"><option selected value="LEI">LEI</option>
+    <option value="EURO">EURO</option><option value="USD">USD</option></select></td></tr>
+<tr><td align="right">{$mm_comentarii_romana}</td>
+	<td align="left"><input type="text" name="comentarii_ro" size="30" maxlength="300" value="{$comentarii_ro}"></td></tr>
+<tr><td align="right">{$mm_comentarii_engleza}</td>
+	<td align="left"><input type="text" name="comentarii_en" size="30" maxlength="300" value="{$comentarii_en}"></td></tr>
+<tr><td align="right">{$mm_comentarii_franceza}</td>
+	<td align="left"><input type="text" name="comentarii_fr" size="30" maxlength="300" value="{$comentarii_fr}"></td></tr>
+<tr><td align="right">{$mm_comentarii_germana}</td>
+	<td align="left"><input type="text" name="comentarii_de" size="30" maxlength="300" value="{$comentarii_de}"></td></tr>
+<tr><td align="right">{$mm_comentarii_spaniola}</td>
+	<td align="left"><input type="text" name="comentarii_es" size="30" maxlength="300" value="{$comentarii_es}"></td></tr>
+<tr><td align="right">{$mm_comentarii_italiana}</td>
+	<td align="left"><input type="text" name="comentarii_it" size="30" maxlength="300" value="{$comentarii_it}"></td></tr>			<tr><td colspan="2" align="left" height="50"><h2>{$un_facilitati} Hotel / {$pensiune} / Motel</h2></td></tr>
+<tr><td colspan="2" align="center"><table class="campuri" align="center" cellspacing=2 cellpadding=0 width=500>
+<tr>{$facilitati}<td>&nbsp;</td></tr></table></td></tr>
+<tr><td align="right">{$mm_carti_de_credit_acceptate}</td>
+    <td valign="middle"><input type="checkbox" name="visa">VISA&nbsp;<input type="checkbox" name="mastercard">MASTER CARD</td></tr>
+<tr><td align="right">{$un_alte_carti_de_credit}</td>
+	<td align="left"><input type="text" maxlength="1000" name="alte_carti_credit" size="30" value="{$alte_carti_credit}"></td></tr>
+<!--<tr><td align="right">{$un_email_rezervari_online}</td>
+	<td align="left"><input type="text" name="mail_rez_online" size="30" value="{$mail_rez_online}"></td></tr>-->
+<tr><td colspan="2" align="left">{$text_imagini_mici}</td></tr>
+<tr><td align="right">{$si_imaginea} 1</td><td align="left"><input type="file" name="poza1" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 2</td><td align="left"><input type="file" name="poza2" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 3</td><td align="left"><input type="file" name="poza3" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 4</td><td align="left"><input type="file" name="poza4" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 5</td><td align="left"><input type="file" name="poza5" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 6</td><td align="left"><input type="file" name="poza6" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 7</td><td align="left"><input type="file" name="poza7" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 8</td><td align="left"><input type="file" name="poza8" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 9</td><td align="left"><input type="file" name="poza9" size="26"></td></tr>
+<tr><td align="right">{$si_imaginea} 10</td><td align="left"><input type="file" name="poza0" size="26"></td></tr>
+<tr><td colspan="2" align="center" height="50"><INPUT type=submit value="{$trimite}"></td></tr></table></form></div></div>
+{include file='../common/footer.phtml'}

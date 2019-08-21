@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /www/
+Allow: /
+
+Sitemap: https://www.christiantransfers.eu/od/site-map/sitemap.php
+Sitemap: https://www.christiantransfers.eu/od/site-map/sitemap-lines.php
+Sitemap: https://www.christiantransfers.eu/od/site-map/sitemap-places.php
+Sitemap: https://www.christiantransfers.eu/od/site-map/sitemap-stations.php
+Sitemap: https://www.christiantransfers.eu/od/site-map/sitemap-stop-points.php
+
+
