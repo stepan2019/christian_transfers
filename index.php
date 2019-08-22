@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(E_ERROR);
-ini_set('display_errors', 'Off');
+ini_set('display_errors', 'off');
 ini_set('include_path', 'E:\workspace\Cristian Transfer\christiantransfers.eu\Zend\library');
 //require 'Zend/Loader.php';
 require_once 'config.php';
@@ -464,7 +464,7 @@ try {
 
     $route = new Zend_Controller_Router_Route_Regex(
         'airport_trains|hmm+/[a-zA-Z0-9\/\-_\(\)]', array(
-        'controller' => 'page2train',
+        'controller' => 'page2trains',
         'action' => 'index'
     ));
     $router->addRoute('page2train', $route);
@@ -562,7 +562,6 @@ try {
     ));
     $router->addRoute('articole', $route);
     $redirect = 'da';
-//    print_r($uri);exit;
     foreach($router->getRoutes() as $route)
     {
         if ($route->match($uri)) $redirect = 'nu';

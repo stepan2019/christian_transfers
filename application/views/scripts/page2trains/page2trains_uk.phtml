@@ -1,172 +1,275 @@
 {include file='../common/header_short.phtml'}
 <script type="text/javascript" language="javascript">
-{literal}
-function display_tr(check)
-{
-	var radios=document.getElementsByName('arrival_auto');
-	for (var i = 0, length = radios.length; i < length; i++) {
-    if (radios[i].checked) {
-        // do whatever you want with the checked radio
-        if(radios[i].value=='9999'){
-        	document.getElementById('arrival_shuttle_td').style.display='';
-        }else{
-			document.getElementById('arrival_shuttle_td').style.display='none';
-        }
-        // only one radio can be logically checked, don't check the rest
-        break;
+    {
+        literal
     }
-}
-}
-function display_tr_dep(check)
-{
-	var radios2=document.getElementsByName('dep_auto');
-	for (var i = 0, length = radios2.length; i < length; i++) {
-    if (radios2[i].checked) {
-        // do whatever you want with the checked radio
-        if(radios2[i].value=='9999'){
-        	document.getElementById('dep_shuttle_td').style.display='';
-        }else{
-			document.getElementById('dep_shuttle_td').style.display='none';
+
+    function display_tr(check) {
+        var radios = document.getElementsByName('arrival_auto');
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                // do whatever you want with the checked radio
+                if (radios[i].value == '9999') {
+                    document.getElementById('arrival_shuttle_td').style.display = '';
+                } else {
+                    document.getElementById('arrival_shuttle_td').style.display = 'none';
+                }
+                // only one radio can be logically checked, don't check the rest
+                break;
+            }
         }
-        // only one radio can be logically checked, don't check the rest
-        break;
     }
-}
-}
-{/literal}
+
+    function display_tr_dep(check) {
+        var radios2 = document.getElementsByName('dep_auto');
+        for (var i = 0, length = radios2.length; i < length; i++) {
+            if (radios2[i].checked) {
+                // do whatever you want with the checked radio
+                if (radios2[i].value == '9999') {
+                    document.getElementById('dep_shuttle_td').style.display = '';
+                } else {
+                    document.getElementById('dep_shuttle_td').style.display = 'none';
+                }
+                // only one radio can be logically checked, don't check the rest
+                break;
+            }
+        }
+    }
+
+    {
+        /literal}
 </script>
 <div class="col2">
-<center>
-<table align="center">
-<tr>
-<td style="padding:0 10px;"><b>Choose your UK car</b> <img style="vertical-align:middle;" src="/images/checked2.jpg" title="Step 1 = Choose your car type for your desire transfer"></td>
-<td style="padding:0 10px;">Complete your personal details <img style="vertical-align:middle;" src="/images/checked3.jpg" title="Step 2 = Complete your personal, company and transfer details"></td>
-<td style="padding:0 10px;">Online card payment <img style="vertical-align:middle;" src="/images/checked3.jpg" title="Step 3 = Complete online payment by card"></td>
-</tr>
-</table>
-</center>
+    <center>
+        <table align="center">
+            <tr>
+                <td style="padding:0 10px;"><b>Choose your UK car</b> <img style="vertical-align:middle;"
+                                                                           src="/images/checked2.jpg"
+                                                                           title="Step 1 = Choose your car type for your desire transfer">
+                </td>
+                <td style="padding:0 10px;">Complete your personal details <img style="vertical-align:middle;"
+                                                                                src="/images/checked3.jpg"
+                                                                                title="Step 2 = Complete your personal, company and transfer details">
+                </td>
+                <td style="padding:0 10px;">Online card payment <img style="vertical-align:middle;"
+                                                                     src="/images/checked3.jpg"
+                                                                     title="Step 3 = Complete online payment by card">
+                </td>
+            </tr>
+        </table>
+    </center>
 
-<form method="POST" action="/details_transfer/{$tara}-{$url_aeroport}-{$url_destinatie}" name="form2" id="form2">
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="black">
-<tr>
-<td style="padding-top: 10px;" align="left"><font  class="textcolor">
-<h2>{$nume_aeroport} ({$nume_tara}) to {$nume_destinatie}</h2>
-<p>Please see bellow all the cars available for your selection.</br>
-   Shuttle bus is with price per person and private cars are with price per all car.</br>
-   Select one of the car with a simple click on the radio button and then click button to <b>Submit your car and go to next step</b>.
-</p>
-</font>
-</td>
-</tr>
+    <form method="POST" action="/details_transfer/{$tara}-{$url_aeroport}-{$url_destinatie}" name="form2" id="form2">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="black">
+            <tr>
+                <td style="padding-top: 10px;" align="left"><font class="textcolor">
+                        <h2>{$nume_aeroport} ({$nume_tara}) to {$nume_destinatie}</h2>
+                        <p>Please see bellow all the cars available for your selection.</br>
+                            Shuttle bus is with price per person and private cars are with price per all car.</br>
+                            Select one of the car with a simple click on the radio button and then click button to <b>Submit
+                                your car and go to next step</b>.
+                        </p>
+                    </font>
+                </td>
+            </tr>
 
-<tr><td><table cellspacing="10" cellpadding="5" border="0">
-<tr><td colspan="2" align="center"><strong><span><font size="2" FACE="Arial" class="textcolor">Select Auto - One way Transfer</font></span></strong></td></tr>
-{section name=n loop=$nrAutoa}
-<tr {if $autoa[n][1] == 'Shuttle'} id="arrival_auto"{/if}><td style="padding-top: 10px; padding-bottom: 10px;" width="120"  class="bgcolor" valign="top">
-    	<table style="background-color:#fff;border: 1px solid rgb(191, 191, 191); padding: 2px;" width="106" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
-    		<tr><td align="center"><img src="{$autoa[n][7]}" width="124" style="height: 93px" border="0" class="img-top-ten" alt="{$autoa[n][1]}"></td>
-    	</tr></table>
-    </td>
-    <td style="padding-top: 10px; padding-bottom: 10px;" class="bgcolor" valign="top">
-    	<table width="100%" border="0" cellpadding="10" cellspacing="0" class="small-border">
-	    	<tr><td width="120">{$autoa[n][1]}</td>
-	        <td class="text_articol_1"><b>{$mm_nr_pasageri}: {$autoa[n][2]}</b></td>
-	        <td class="text_articol_1"><font class="textcolor"><b>Miles:</b> {$autoa[n][3]}</font></td>
-	        <td class="text_articol_1"><font class="textcolor"><b>{$mm_timp}:</b> {$autoa[n][4]}</font></td>
-	        <td class="text_articol_1"><b>{$un_pret}:</b> {if $selected_arrival_auto == 0}{/if}{$autoa[n][10]} {$currency}</td>	         	        
-	        <td class="text_articol_1"><input type="radio" name="arrival_auto"{if $selected_arrival_auto!=0 && $selected_arrival_auto == $autoa[n][0]} checked
-{elseif $selected_arrival_auto == 0 && $autoa[n][1]=='Shuttle'} checked
-{/if} onclick="display_tr(document.getElementById('arrival_shuttle'))" {$isshuttle} value="{$autoa[n][0]}"></td></tr>
-<tr>
-<td colspan="6" align="left"><font size="2" FACE="Arial" class="textcolor">
-<h1>{$autoa[n][1]} transfer with {$autoa[n][2]} persons {$nume_aeroport} - {$nume_destinatie}</h1>
-</font></td></tr>
-</table>
-</td>
-</tr>
-{if $autoa[n][1] == 'Shuttle'}<tr id="arrival_shuttle_td" style="{if $selected_arrival_auto != 0}display:none;{/if}"><td colspan="2" style="width:702px;padding:0;">{$statii_shuttle_arrival}</td></tr>{/if}
-{/section}
-<tr><td style="padding-top: 10px;" align="left" colspan="6"><font class="textcolor">
-<p>You select your transfer in <strong>{$nume_tara}</strong> from <strong>{$nume_aeroport}</strong> to <strong>{$nume_destinatie}</strong>.</br>
-   You can also select your <b>Return</b> transfer from <strong>{$nume_destinatie}</strong> to <strong>{$nume_aeroport}</strong> bellow.</br>
-   If you selected only <b>One Way</b> transfer you can still go on the left side menu of the page to choose <b>Return Transfer</b>.</br> 
-   Select one of the car with a simple click on the radio button and then click <b>Submit your car and go to next step</b>.
-</p></font>
-</td></tr>
-</table>
-</td></tr>
+            <tr>
+                <td>
+                    <table cellspacing="10" cellpadding="5" border="0">
+                        <tr>
+                            <td colspan="2" align="center"><strong><span><font size="2" FACE="Arial" class="textcolor">Select Auto - One way Transfer</font></span></strong>
+                            </td>
+                        </tr>
+                        {section name=n loop=$nrAutoa}
+                        <tr {if $autoa[n][1]==
+                        'Shuttle'} id="arrival_auto"{/if}>
+                        <td style="padding-top: 10px; padding-bottom: 10px;" width="120" class="bgcolor" valign="top">
+                            <table style="background-color:#fff;border: 1px solid rgb(191, 191, 191); padding: 2px;"
+                                   width="106" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center"><img src="{$autoa[n][7]}" width="124" style="height: 93px"
+                                                            border="0" class="img-top-ten" alt="{$autoa[n][1]}"></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="padding-top: 10px; padding-bottom: 10px;" class="bgcolor" valign="top">
+                            <table width="100%" border="0" cellpadding="10" cellspacing="0" class="small-border">
+                                <tr>
+                                    <td width="120">{$autoa[n][1]}</td>
+                                    <td class="text_articol_1"><b>{$mm_nr_pasageri}: {$autoa[n][2]}</b></td>
+                                    <td class="text_articol_1"><font class="textcolor"><b>Miles:</b>
+                                            {$autoa[n][3]}</font></td>
+                                    <td class="text_articol_1"><font class="textcolor"><b>{$mm_timp}:</b> {$autoa[n][4]}</font>
+                                    </td>
+                                    <td class="text_articol_1"><b>{$un_pret}:</b> {if $selected_arrival_auto ==
+                                        0}{/if}{$autoa[n][10]} {$currency}
+                                    </td>
+                                    <td class="text_articol_1"><input type="radio" name="arrival_auto" {if
+                                                                      $selected_arrival_auto!=0 &&
+                                                                      $selected_arrival_auto== $autoa[n][0]} checked
+                                                                      {elseif $selected_arrival_auto== 0 &&
+                                                                      $autoa[n][1]=='Shuttle'} checked
+                                                                      {/if}
+                                        onclick="display_tr(document.getElementById('arrival_shuttle'))" {$isshuttle}
+                                        value="{$autoa[n][0]}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" align="left"><font size="2" FACE="Arial" class="textcolor">
+                                            <h1>{$autoa[n][1]} transfer with {$autoa[n][2]} persons {$nume_aeroport} -
+                                                {$nume_destinatie}</h1>
+                                        </font></td>
+                                </tr>
+                            </table>
+                        </td>
+                        </tr>
+                        {if $autoa[n][1] == 'Shuttle'}
+                        <tr id="arrival_shuttle_td" style="{if $selected_arrival_auto != 0}display:none;{/if}">
+                            <td colspan="2" style="width:702px;padding:0;">{$statii_shuttle_arrival}</td>
+                        </tr>
+                        {/if}
+                        {/section}
+                        <tr>
+                            <td style="padding-top: 10px;" align="left" colspan="6"><font class="textcolor">
+                                    <p>You select your transfer in <strong>{$nume_tara}</strong> from <strong>{$nume_aeroport}</strong>
+                                        to <strong>{$nume_destinatie}</strong>.</br>
+                                        You can also select your <b>Return</b> transfer from
+                                        <strong>{$nume_destinatie}</strong> to <strong>{$nume_aeroport}</strong>
+                                        bellow.</br>
+                                        If you selected only <b>One Way</b> transfer you can still go on the left side
+                                        menu of the page to choose <b>Return Transfer</b>.</br>
+                                        Select one of the car with a simple click on the radio button and then click <b>Submit
+                                            your car and go to next step</b>.
+                                    </p></font>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-<tr><td><table cellspacing="10" cellpadding="5" border="0">
-<tr><td colspan="2" align="center"><strong><span><font size="2" FACE="Arial" class="textcolor">{$return}</font></span></strong></td></tr>
-{section name=n loop=$nrAutod}
-<tr {if $selected_dep_auto == 0} id="dep_auto"{/if}><td style="padding-top: 10px; padding-bottom: 10px;" width="120" class="bgcolor" valign="top">
-    	<table style="background-color:#fff;border: 1px solid rgb(191, 191, 191); padding: 2px;" width="106" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
-    		<tr><td align="center"><img src="{$autod[n][7]}" width="124" style="height: 93px" border="0" class="img-top-ten" alt="{$autod[n][1]}"></td>
-    	</tr></table>
-    </td>
-    <td style="padding-top: 10px; padding-bottom: 10px;" class="bgcolor" valign="top">
-    	<table width="100%" border="0" cellpadding="10" cellspacing="0" class="small-border">
-	    	<tr><td width="120">{$autod[n][1]}</td>
-	        <td class="text_articol_1"><b>{$mm_nr_pasageri}: {$autod[n][2]}</b></td>
-	        <td class="text_articol_1"><font class="textcolor"><b>Miles:</b> {$autod[n][3]}</font></td>
-	        <td class="text_articol_1"><font class="textcolor"><b>{$mm_timp}:</b> {$autod[n][4]}</font></td>
-	        <td class="text_articol_1"><b>{$un_pret}:</b> {if $selected_dep_auto == 0}{/if}{$autod[n][10]} {$currency}</td>
-	        <td class="text_articol_1"><input type="radio" name="dep_auto" {$selected_dep_auto} {if $selected_dep_auto!=0 && $selected_dep_auto == $autod[n][0]} checked
-{elseif $selected_dep_auto == 0 && $autod[n][1]=='Shuttle'} checked 
-{/if} onclick="display_tr_dep(document.getElementById('dep_shuttle'))" value="{$autod[n][0]}"></td></tr>
-<tr><td colspan="6" align="left"><font size="2" FACE="Arial" class="textcolor">
-<h1>{$autoa[n][1]} transfer with {$autoa[n][2]} persons {$nume_destinatie} - {$nume_aeroport}</h1>
-</font></td></tr>
-</table>
-</td>
-</tr>
-{if $autod[n][1] == 'Shuttle'}<tr id="dep_shuttle_td" style="{if $selected_dep_auto != 0}display:none;{/if}"><td colspan="2" style="width:702px;padding:0">{$statii_shuttle_dep}</td></tr>{/if}
-<!-- assign var="selected_dep_auto" value=-1 -->
-{/section}
+            <tr>
+                <td>
+                    <table cellspacing="10" cellpadding="5" border="0">
+                        <tr>
+                            <td colspan="2" align="center"><strong><span><font size="2" FACE="Arial" class="textcolor">{$return}</font></span></strong>
+                            </td>
+                        </tr>
+                        {section name=n loop=$nrAutod}
+                        <tr {if $selected_dep_auto== 0} id="dep_auto" {
+                        /if}>
+                        <td style="padding-top: 10px; padding-bottom: 10px;" width="120" class="bgcolor" valign="top">
+                            <table style="background-color:#fff;border: 1px solid rgb(191, 191, 191); padding: 2px;"
+                                   width="106" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center"><img src="{$autod[n][7]}" width="124" style="height: 93px"
+                                                            border="0" class="img-top-ten" alt="{$autod[n][1]}"></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="padding-top: 10px; padding-bottom: 10px;" class="bgcolor" valign="top">
+                            <table width="100%" border="0" cellpadding="10" cellspacing="0" class="small-border">
+                                <tr>
+                                    <td width="120">{$autod[n][1]}</td>
+                                    <td class="text_articol_1"><b>{$mm_nr_pasageri}: {$autod[n][2]}</b></td>
+                                    <td class="text_articol_1"><font class="textcolor"><b>Miles:</b>
+                                            {$autod[n][3]}</font></td>
+                                    <td class="text_articol_1"><font class="textcolor"><b>{$mm_timp}:</b> {$autod[n][4]}</font>
+                                    </td>
+                                    <td class="text_articol_1"><b>{$un_pret}:</b> {if $selected_dep_auto ==
+                                        0}{/if}{$autod[n][10]} {$currency}
+                                    </td>
+                                    <td class="text_articol_1"><input type="radio" name="dep_auto" {$selected_dep_auto}
+                                                                      {if $selected_dep_auto!=0 && $selected_dep_auto==
+                                                                      $autod[n][0]} checked
+                                                                      {elseif $selected_dep_auto== 0 &&
+                                                                      $autod[n][1]=='Shuttle'} checked
+                                                                      {/if}
+                                        onclick="display_tr_dep(document.getElementById('dep_shuttle'))"
+                                        value="{$autod[n][0]}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" align="left"><font size="2" FACE="Arial" class="textcolor">
+                                            <h1>{$autoa[n][1]} transfer with {$autoa[n][2]} persons {$nume_destinatie} -
+                                                {$nume_aeroport}</h1>
+                                        </font></td>
+                                </tr>
+                            </table>
+                        </td>
+                        </tr>
+                        {if $autod[n][1] == 'Shuttle'}
+                        <tr id="dep_shuttle_td" style="{if $selected_dep_auto != 0}display:none;{/if}">
+                            <td colspan="2" style="width:702px;padding:0">{$statii_shuttle_dep}</td>
+                        </tr>
+                        {/if}
+                        <!-- assign var="selected_dep_auto" value=-1 -->
+                        {/section}
 
-</table>
-</td>
-</tr>
-</br></br>
-<tr><td><input class="button1input" type="submit" name="submit" value="Submit your car and go to next step from you Booking">
-</td>
-</tr>
-<tr><td colspan="8" style="padding-top: 10px;"><font class="textcolor" size="2" FACE="Arial">
-<p>{$extra_info}
-</p>
-<p><a href='http://www.hotelscombined.com/?a_aid=87601' target='_blank' rel='follow'><strong>Please check for Hotel bookings in {$nume_aeroport} - {$nume_tara}. No tax for reservations, comparation on several sites, over 220 countries available for bookings, we speak 39 languages, 120 currencies for payment, best prices.</strong></a></br>
-</p>
-<p><strong>Christian Transfers</strong> can arrange any type of private transportation from <strong>{$nume_aeroport}</strong> for any group size to more than 500 destinations from Romania, Hungary, Bulgaria, Serbia, Austria, Croatia, Germany and other countries arround. Private taxi transfers, group minivans or minibuses and coaches are available on the website or on request.
-</p>
-<p>
-<table width="90%" cellspacing="10" cellpadding="5" border="0">
-<tr>
-<td align="left" style="border:0px;" style="width:200px;"><strong>All available transfers from {$nume_aeroport}<br><br>{$extra_info1}</strong>
-</td>
-<td style="width:20px;">&nbsp;
-</td>
-<td align="right" style="border:0px;" style="width:200px;"><strong>All available transfers to {$nume_destinatie}<br><br>{$extra_info2}</strong>
-</td>
-</tr>
-</table>
-</p>
-<p><a href='/airport_transfer/{$tara}-{$url_aeroport}-{$url_destinatie}' alt='{$nume_aeroport} - {$nume_destinatie}'><h1>{$nume_aeroport} - {$nume_tara} to {$nume_destinatie} shuttle bus private taxi and minibus transfer</h1></a>
-</p></br></br></br>
-<p>Why use our private or shuttle transfers from {$nume_aeroport} when you are in {$nume_tara} ? </br>
+                    </table>
+                </td>
+            </tr>
+            </br></br>
+            <tr>
+                <td><input class="button1input" type="submit" name="submit"
+                           value="Submit your car and go to next step from you Booking">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="8" style="padding-top: 10px;"><font class="textcolor" size="2" FACE="Arial">
+                        <p>{$extra_info}
+                        </p>
+                        <p><a href='http://www.hotelscombined.com/?a_aid=87601' target='_blank' rel='follow'><strong>Please
+                                    check for Hotel bookings in {$nume_aeroport} - {$nume_tara}. No tax for
+                                    reservations, comparation on several sites, over 220 countries available for
+                                    bookings, we speak 39 languages, 120 currencies for payment, best
+                                    prices.</strong></a></br>
+                        </p>
+                        <p><strong>Christian Transfers</strong> can arrange any type of private transportation from
+                            <strong>{$nume_aeroport}</strong> for any group size to more than 500 destinations from
+                            Romania, Hungary, Bulgaria, Serbia, Austria, Croatia, Germany and other countries arround.
+                            Private taxi transfers, group minivans or minibuses and coaches are available on the website
+                            or on request.
+                        </p>
+                        <p>
+                        <table width="90%" cellspacing="10" cellpadding="5" border="0">
+                            <tr>
+                                <td align="left" style="border:0px;" style="width:200px;"><strong>All available
+                                        transfers from {$nume_aeroport}<br><br>{$extra_info1}</strong>
+                                </td>
+                                <td style="width:20px;">&nbsp;
+                                </td>
+                                <td align="right" style="border:0px;" style="width:200px;"><strong>All available
+                                        transfers to {$nume_destinatie}<br><br>{$extra_info2}</strong>
+                                </td>
+                            </tr>
+                        </table>
+                        </p>
+                        <p><a href='/airport_transfer/{$tara}-{$url_aeroport}-{$url_destinatie}'
+                              alt='{$nume_aeroport} - {$nume_destinatie}'><h1>{$nume_aeroport} - {$nume_tara} to
+                                    {$nume_destinatie} shuttle bus private taxi and minibus transfer</h1></a>
+                        </p>
+                        </br></br></br>
+                        <p>Why use our private or shuttle transfers from {$nume_aeroport} when you are in {$nume_tara}
+                            ? </br>
 
-- <b>Reliability and convenience</b> because of the carefully selected <b>transportation companies</b>; </br>
-- Save money & time with <b>fixed rates</b>, no booking fees, no hidden charges, no charge for excess luggage; </br>
-- No surprises about <b>Airport Meet and Greet</b>. </br>
-- 24 hours pick-up or drop-off, vehicle and passenger seat insurance, friendly hotel or resort orientation; </br> 
-- <b>Door to door service</b> for private transfers, <b>monitored flight and train schedule</b> for airports and stations pickups;
-</p>
-</font>
-</td></tr>
-</table>
-</form>
+                            - <b>Reliability and convenience</b> because of the carefully selected <b>transportation
+                                companies</b>; </br>
+                            - Save money & time with <b>fixed rates</b>, no booking fees, no hidden charges, no charge
+                            for excess luggage; </br>
+                            - No surprises about <b>Airport Meet and Greet</b>. </br>
+                            - 24 hours pick-up or drop-off, vehicle and passenger seat insurance, friendly hotel or
+                            resort orientation; </br>
+                            - <b>Door to door service</b> for private transfers, <b>monitored flight and train
+                                schedule</b> for airports and stations pickups;
+                        </p>
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </form>
 </div>
-	</div>
-	</section>
+</div>
+</section>
 </div>
 {$javascript}
-{include file='../common/footer.phtml'}
+{include file='../common/trains.phtml'}

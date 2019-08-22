@@ -92,7 +92,7 @@ class TrainsController extends Zend_Controller_Action
         $banners = $this->view->render('../common/banners.phtml');
         $this->view->assign("banners", $banners);
         $this->view->assign("latime_tabel_dreapta", $latime_tabel_dreapta);
-        echo $this->view->render('index.phtml');
+        echo $this->view->render('trains.phtml');
     }
 }
 

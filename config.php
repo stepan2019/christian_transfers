@@ -5,7 +5,7 @@
 
 	//all requires go here
 	require_once 'basepath.php';
-	require_once 'Zend/Cache.php';
+//	require_once 'Zend/Cache.php';
 	require_once 'Zend/Db.php';
 	require_once 'Zend/Debug.php';
 	require_once 'Zend/Registry.php';

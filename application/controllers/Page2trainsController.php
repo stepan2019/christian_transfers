@@ -120,7 +120,7 @@ class Page2trainsController extends Zend_Controller_Action
                             $javascript = '<script language=\'JavaScript\' type=\'text/javascript\'>
                             $(document).ready(function () { 
                                 $.ajax({
-                                   url: "/application/search_table.php",
+                                   url: "/application/search_trains.php",
                                    type: "get",
                                    dataType: "html",
                                    data: {"days_arrival" : "' . $days . '"},
@@ -135,7 +135,7 @@ class Page2trainsController extends Zend_Controller_Action
                                 $(\'#form2 input\').live(\'change\', function () { 
                                     if ($(\'input[name=arrival_auto]:checked\', \'#form2\').val()!=\'9999\'){
                              $.ajax({
-                               url: "/application/search_table.php",
+                               url: "/application/search_trains.php",
                                type: "get",
                                dataType: "html",
                                        success: function(returnData){
@@ -147,7 +147,7 @@ class Page2trainsController extends Zend_Controller_Action
                                     });
                                     }else{
                                         $.ajax({
-                                       url: "/application/search_table.php",
+                                       url: "/application/search_trains.php",
                                        type: "get",
                                        dataType: "html",
                                data: {"days_arrival" : "' . $days . '"},
@@ -484,9 +484,9 @@ class Page2trainsController extends Zend_Controller_Action
         $this->view->assign("description", $meta);
 
         if ($id_tara == 34) {
-            echo $this->view->render('page2_uk.phtml');
+            echo $this->view->render('page2trains_uk.phtml');
         } else {
-            echo $this->view->render('page2.phtml');
+            echo $this->view->render('page2trains.phtml');
         }//print_r ($_SESSION);
     }
 }

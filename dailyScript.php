@@ -1,5 +1,8 @@
 <?php
 
+// This script is to extract daily info from Distribution and to actualize the data in our data base for Stations, Companies. 
+// Connections are made from API.
+
 set_time_limit(0);
 $host = "localhost";
 $username = "brgambal_eu";
@@ -50,14 +53,20 @@ else{
         $id = $data["id"];
         $station_type = $data["attributes"]["station_type"];
         $name = $data["attributes"]["name"];
+		$description = $data["attributes"]["description"];
+		$street_and_number = $data["attributes"]["street_and_number"];
+		$zip_code = $data["attributes"]["zip_code"];
+		$longitude = $data["attributes"]["longitude"];
+		$latitude = $data["attributes"]["latitude"];
+		$time_zone = $data["attributes"]["time_zone"];
         $city = $data["relationships"]["city"]["data"]["id"];
         $type = $data["attributes"]["station_type"];
         if($type == "bus_station"){
-            $sql = "INSERT INTO aaBusStations (id, name, station_type, city_id) VALUES ('$id', '$name', '$station_type', '$city')";
+            $sql = "INSERT INTO aaBusStations (id, name, description, street_and_number, zip_code, longitude, latitude, time_zone, station_type, city_id) VALUES ('$id', '$name', '$description', '$street_and_number', '$zip_code', '$longitude', '$latitude', '$time_zone', '$station_type', '$city')";
             $result = mysqli_query($conn,$sql);
         }
         if($type == "train_station"){
-            $sql = "INSERT INTO aaTrainStations (id, name, station_type, city_id) VALUES ('$id', '$name', '$station_type', '$city')";
+            $sql = "INSERT INTO aaTrainStations (id, name, description, street_and_number, zip_code, longitude, latitude, time_zone, station_type, city_id) VALUES ('$id', '$name', '$description', '$street_and_number', '$zip_code', '$longitude', '$latitude', '$time_zone', '$station_type', '$city')";
             $result = mysqli_query($conn,$sql);
         }
 

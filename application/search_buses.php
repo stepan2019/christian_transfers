@@ -314,7 +314,7 @@ if (isset($_POST["dep_passengers"]) && $_POST["dep_passengers"] != "" && $_SESSI
                     $('#dep-date').datetimepicker({
                         stepMinute: 5,
                         minDate: 0,
-                        hour: 07,
+                        hour: 7,
                         minute: 30,
                         showMillisec: false,
                         showMicrosec: false,
@@ -340,7 +340,7 @@ if (isset($_POST["dep_passengers"]) && $_POST["dep_passengers"] != "" && $_SESSI
                             stepMinute: 5,
                             minDate: 0,
                             hour: 10,
-                            minute: 00,
+                            minute: 0,
                             showTime: true,
                             timeOnlyShowDate: true,
                             alwaysSetTime: true,
